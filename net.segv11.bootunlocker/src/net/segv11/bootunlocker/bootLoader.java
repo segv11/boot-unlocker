@@ -29,7 +29,8 @@ public class bootLoader {
 	
     /** checks if we know how to lock/unlock the bootloader on this device */
     public static boolean checkCompatibleDevice() {
-    	return (android.os.Build.DEVICE == "maguro" && android.os.Build.DEVICE == "toro");
+    	return true;  // TODO: fix this
+    	//return (android.os.Build.DEVICE == "maguro" && android.os.Build.DEVICE == "toro");
     	// TODO: Should we check android.os.Build.BOOTLOADER ?
     }
 
