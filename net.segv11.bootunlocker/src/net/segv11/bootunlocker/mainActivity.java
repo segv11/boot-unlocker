@@ -67,7 +67,6 @@ public class mainActivity extends Activity {
     	 * 
     	 * TODO: Should we check device prop to make sure we have maguro or toro (or toroplus?)
     	 * TODO: Set text colors for status
-    	 * TODO: Generate keys.  Verify sideloading works.  Think about Play Store.
     	 */
     	String command = "dd ibs=1 count=1 skip=124 if=/dev/block/platform/omap/omap_hsmmc.0/by-name/param"; 
 		int theState;
