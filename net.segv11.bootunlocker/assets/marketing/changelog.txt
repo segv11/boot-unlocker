@@ -1,9 +1,7 @@
-Version 0.6 Beta:
------------------
-* Checks that you have a "toro" or "maguro" device before doing anything.
-* Makes diagnostic output to logcat.
-* Various code cleanups
+=== Version 0.6 Beta: ===
+ * Checks that you have a "toro" or "maguro" device before doing anything.
+ * Makes diagnostic output to logcat.
+ * Various code cleanups
 
-Version 0.5 ALPHA:
-------------------
-* Initial Release
+=== Version 0.5 ALPHA: ===
+ * Initial Release
