@@ -1,1 +1,1 @@
-BootUnlocker unlocks the Galaxy Nexus bootloader from within Android
+[root] BootUnlocker for Galaxy Nexus -- Unlock your bootloader without fastboot

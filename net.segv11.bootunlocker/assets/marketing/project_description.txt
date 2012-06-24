@@ -1,5 +1,9 @@
+== !BootUnlocker for Galaxy Nexus -- Unlock your bootloader without fastboot. ==
+
 This application *REQUIRES* a Galaxy Nexus (_maguro_ or _toro_) with root and busybox.
 
-Some of us who root our phones are torn between the convenience and flexibility of an unlocked bootloader, and the security of a locked bootloader.  We know that in order to prevent an unauthorized user from accessing our data through a custom recovery, "fastboot oem unlock" wipes userdata.  This also means that if we lock our bootloader, we we will need to do a full backup-and-restore when we decide to unlock it again.
+--------
 
-[http://code.google.com/p/boot-unlocker-gnex BootUnlocker for Galaxy Nexus] helps you have the best of both world by avoiding "fastboot oem unlock" and its associated data wipe.  The _PRIMELA03_ bootloader stores the lock status at position 0x000007C (124 decimal) of the "param" partition.  This application uses root privileges to write to that location directly, bypassing fastboot entirely.  This allows you to keep your bootloader locked for security, with this application safely protected behind your keyguard password.
+Some of us who root our phones are torn between the convenience and flexibility of an unlocked bootloader, and the security of a locked bootloader.  We know that in order to prevent an unauthorized user from accessing our data through a custom recovery, `fastboot oem unlock` wipes userdata.  This also means that if we lock our bootloader, we we will need to do a full backup-and-restore when we decide to unlock it again.
+
+_!BootUnlocker for Galaxy Nexus_ helps you have the best of both world by avoiding `fastboot oem unlock` and its associated data wipe.  The _PRIMELA03_ bootloader stores the lock status at position` 0x000007C` (124 decimal) of the `param` partition.  This application uses root privileges to write to that location directly, bypassing fastboot entirely.  This allows you to keep your bootloader locked for security, with this application safely protected behind your keyguard password.
