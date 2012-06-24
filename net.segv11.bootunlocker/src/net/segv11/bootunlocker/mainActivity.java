@@ -4,13 +4,17 @@ import java.io.IOException;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class mainActivity extends Activity {
-	   
+
+	/** For logging */
+	public static final String TAG = "net.segv11.mainActivity";
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,7 @@ public class mainActivity extends Activity {
     @Override
     public void onStart() {
     	super.onStart();
+		Log.v(TAG, "handling onStart ");
     	updateUI();
    }
     
@@ -30,9 +35,7 @@ public class mainActivity extends Activity {
     	try {
     		bootLoader.setLockStatus(false);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block -- do we really want TOAST here?
-	    	Toast err = Toast.makeText(this, "Cannot run SU", Toast.LENGTH_SHORT);
-	    	err.show();
+    		Log.v(TAG, "Caught IOException unlocking: " + e);
 		}
     	// TODO: Wait for command to finish before updating UI.
     	updateUI();
@@ -43,11 +46,9 @@ public class mainActivity extends Activity {
     	try {
         	bootLoader.setLockStatus(true);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block -- do we really want TOAST here?
-	    	Toast err = Toast.makeText(this, "Cannot run SU", Toast.LENGTH_SHORT);
-	    	err.show();
+    		Log.v(TAG, "Caught IOException locking: " + e);
 		}
-    	// TODO: Wait for command to finish before updating UI.
+
     	// TODO: Wait for command to finish before updating UI.
     	updateUI();
     }
