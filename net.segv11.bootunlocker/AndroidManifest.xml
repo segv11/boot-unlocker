@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.segv11.bootunlocker"
-    android:versionCode="3"
-    android:versionName="0.6 Beta" >
+    android:versionCode="4"
+    android:versionName="0.7 Beta">
 
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="15"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="true"/>
+    <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="true"/>
 
     <application
         android:icon="@drawable/ic_launcher"
