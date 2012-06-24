@@ -1,3 +1,6 @@
+=== Version 0.8 Beta: ===
+ * New launcher icons and screenshots
+
 === Version 0.7 Beta: ===
  * Device restrictions in the Manifest to prevent installation on many non-Galaxy Nexus devuces
 
