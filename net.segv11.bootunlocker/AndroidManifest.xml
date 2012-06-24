@@ -7,7 +7,13 @@
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="15"/>
     <uses-feature android:name="android.hardware.nfc" android:required="true"/>
     <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="true"/>
-    <supports-screens android:largeScreens="false" android:normalScreens="true" android:smallScreens="false" android:resizeable="false" android:xlargeScreens="false"/>
+    <supports-screens android:largeScreens="false" 
+        android:normalScreens="true" 
+        android:smallScreens="false"
+         android:xlargeScreens="false"/>
+    <compatible-screens>
+        <screen android:screenSize="normal" android:screenDensity="xhdpi"/>
+    </compatible-screens>
 
     <application
         android:icon="@drawable/ic_launcher"
