@@ -1,0 +1,9 @@
+	* Device Restrictions
+	* Promo Text
+	* (Tips / Known Issues)
+	* Open Source
+		Redistrib allowed under Apache Licence (link)
+		Link to source on google code
+	* Link to download on Google Play
+	* link to download on Google Code
+	* How to get support (on this thread, or start an issue on Google Code)

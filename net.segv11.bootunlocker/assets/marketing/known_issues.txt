@@ -2,4 +2,3 @@
 
  * Race condition with Superuser/SuperSU access request on first launch.
  * Race condition with updating the UI after locking or unlocking the bootloader.
- * No application icon.

@@ -1,0 +1,47 @@
+Play Store Title:
+	BootUnlocker for Galaxy Nexus
+
+Play Store Description:
+	* TODO: /net.segv11.bootunlocker/assets/marketing/playstore_01_description
+
+Recent Changes:
+	Reformat from /net.segv11.bootunlocker/assets/marketing/changelog.txt
+
+Promo Text:
+	[root] BootUnlocker for Galaxy Nexus -- Unlock your bootloader without fastboot
+
+Application Type:
+	Applications / Tools
+
+Copy Protection:
+	Off
+
+Content Rating:
+	Low Maturity
+
+Pricing:
+	Free
+
+Availability:
+	All locations
+
+Supported Devices:
+	maguro
+	toro
+	(manually exclude all others -- about 20 devices total)
+	
+Screenshots:	480x854 portrait	(actually 1280x720 and 1280x800 are now allowed too)
+	/net.segv11.bootunlocker/assets/art/screenshot_locked.png
+	/net.segv11.bootunlocker/assets/art/screenshot_unlocked.png
+	
+High Resolution Application Icon:	512x512
+	/net.segv11.bootunlocker/assets/art/ic_launcher_bootunlock.512.png
+
+Promotional Graphic:	180x120 landscape
+	(to be made before Promo Text can be used)
+
+Feature Graphic:	1024x500 landscpe; needs 50px border all sides 
+	(to be made at some point)
+
+Video Link:		YouYube 0:30 - 2:00
+	(to be made once the app has more features)
