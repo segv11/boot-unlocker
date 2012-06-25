@@ -1,4 +1,22 @@
-	* Technical details on how it works
-	* Thanks to contributors
-	* Link to other XDA thread
-	* Future plans
+_BootUnlocker for Galaxy Nexus_ avoids using "fastboot oem unlock", with its associated
+"userdata" wipe by writing directly to the "param" partition of your device's internal storage.
+The _PRIMELA03_ bootloader stores the lock status at position 0x000007C (124 decimal)
+of this partition: fastboot updates this when locking and unlocking the bootloader.
+   
+_BootUnlocker_ uses root privileges to write to that location directly, bypassing fastboot.
+This allows you to lock and unlock your bootloader from within
+Android, without wiping your "userdata" parition.
+
+
+The technique used was discovered through the efforts of several contributors on
+another XDA thread:
+http://forum.xda-developers.com/showthread.php?t=1650830&page=13
+
+Special thanks go to those who posted raw images of their "param" partitions for
+analysis (Archpope, AdamOutler, efrant, NCguy, and Raftysworld) 
+as well as to the beta testers of this application (efrant and Mach3.2).
+This application could not have been written without their contributions.
+
+To learn more about how this app works, and plans for future functionality,
+follow this project on Google Code: https://code.google.com/p/boot-unlocker-gnex/
+
