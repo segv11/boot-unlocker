@@ -38,10 +38,10 @@ High Resolution Application Icon:	512x512
 	/net.segv11.bootunlocker/assets/art/ic_launcher_bootunlock.512.png
 
 Promotional Graphic:	180x120 landscape
-	(to be made before Promo Text can be used)
+	(TODO: Must be made before Promo Text can be used)
 
 Feature Graphic:	1024x500 landscpe; needs 50px border all sides 
-	(to be made at some point)
+	(TODO, at some point in the future.  This is the "banner" at the top of the app's page.)
 
 Video Link:		YouYube 0:30 - 2:00
-	(to be made once the app has more features)
+	(TODO once the app has more features)

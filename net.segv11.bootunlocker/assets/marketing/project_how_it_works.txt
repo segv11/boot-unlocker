@@ -1,4 +1,0 @@
-	* Technical details on how it works
-	* Thanks to contributors
-	* Link to other XDA thread
-	* Future plans
