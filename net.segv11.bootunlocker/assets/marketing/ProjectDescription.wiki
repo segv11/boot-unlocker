@@ -1,7 +1,7 @@
 #labels Featured
 == !BootUnlocker for Galaxy Nexus -- Unlock your bootloader without fastboot. ==
 
-This application *REQUIRES* a Galaxy Nexus (_maguro_ or _toro_) with root and busybox.
+This application *REQUIRES* a Galaxy Nexus (_maguro_ or _toro_) with root.
 
 --------
 
