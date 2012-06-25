@@ -1,3 +1,4 @@
 === Known issues as of version 0.9 Beta: ===
 
- * (none)
+ * Users of ChainsDD's Superuser app may experience duplicate Superuser requests.
+ 
