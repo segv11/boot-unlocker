@@ -31,4 +31,4 @@ analysis (
 ). This application could not have been written without their contributions.
 
 For more details and discussion about _!BootUnlocker for Galaxy Nexus_, follow this project
-on Google Code, or subscribe the application's XDA thread: {TODO}
+on Google Code, or subscribe the application's XDA thread: http://forum.xda-developers.com/showthread.php?p=27878074
