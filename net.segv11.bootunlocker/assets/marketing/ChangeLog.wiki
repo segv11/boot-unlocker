@@ -1,3 +1,6 @@
+=== Version 1.0 ===
+ * Initial Release on XDA and Play Store
+
 === Version 0.9 Beta: ===
  * Fixed race conditions from exec()ing su on the main thread
  * Removed the need for busybox

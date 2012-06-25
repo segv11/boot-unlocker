@@ -1,4 +1,4 @@
-=== Known issues as of version 0.9 Beta: ===
+=== Known issues as of version 1.0 ===
 
  * Users of ChainsDD's Superuser app may experience duplicate Superuser requests.
  

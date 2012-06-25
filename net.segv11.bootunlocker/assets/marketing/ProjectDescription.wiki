@@ -52,15 +52,15 @@ limitations under the License.
 
 ==== Downloads ====
 
-    * Download application from Google Play: {TODO}
-
+    * Download application from Google Play: http://play.google.com/store/apps/details?id=net.segv11.bootunlocker
+  
     * Download application from Google Code: http://code.google.com/p/boot-unlocker-gnex/downloads
 
 ==== Support ====
 
 	* Open an [http://code.google.com/p/boot-unlocker-gnex/issues Issue] on Google Code
 
-	* Leave a comment on the XDA Thread: {TODO}
+	* Leave a comment on the XDA Thread: {TODO + use wikilink}
 
 	* Email [mailto://support@segv11.net support@segv11.net]
 

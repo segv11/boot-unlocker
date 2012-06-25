@@ -41,7 +41,7 @@ the Google Code project page.
 
 ==== Downloads ====
 
-    * Download application from Google Play: {TODO}
+    * Download application from Google Play: http://play.google.com/store/apps/details?id=net.segv11.bootunlocker
 
     * Download application from Google Code: http://code.google.com/p/boot-unlocker-gnex/downloads
 
