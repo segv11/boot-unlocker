@@ -11,6 +11,8 @@
     <string name="stat_locked">Locked</string>
     <string name="stat_unlocked">Unlocked</string>
     <string name="stat_no_root">No root access</string>
-    <string name="stat_unknown_device">Unrecognized device</string>
-
+    <string name="stat_unknown_device">Unsupported device</string>
+    <string name="waiting_for_root">Waiting for root&#8230;</string>
+    <string name="extra_unknown_device">Device &#8220;%1$s&quot;&#8221; not supported.</string>
+    
 </resources>

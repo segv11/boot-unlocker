@@ -19,17 +19,24 @@ public class bootLoader {
 	public static final int BL_UNLOCKED = 0;
 	public static final int BL_LOCKED = 1;
 	public static final int BL_UNKNOWN = 2;
+	
+	// how long to wait after calling su to update param
+	// before we update the UI:
+	public static final long delayAfterChange = 150;	// 150ms
 
 	/** For logging */
-	public static final String TAG = "net.segv11.bootloader";
+	private static final String TAG = "net.segv11.bootloader";
 	
-	/** private constants for working with the lock state in the param partition */
+	/** Private constants for working with the lock state in the param partition
+	 *	Busybox is needed because they use the echo from busybox; dd is stock.
+	 *	TODO: Check for busybox, or write the byte directly to an InputStream
+	 */
 	private static final String queryCommand =
-		"dd ibs=1 count=1 skip=124 if=/dev/block/platform/omap/omap_hsmmc.0/by-name/param"; 
+		"/system/bin/dd ibs=1 count=1 skip=124 if=/dev/block/platform/omap/omap_hsmmc.0/by-name/param"; 
 	private static final String lockCommand =
-		"echo -n '\\x01' |  dd obs=1 count=1 seek=124 of=/dev/block/platform/omap/omap_hsmmc.0/by-name/param";
+		"echo -n '\\x01' |  /system/bin/dd obs=1 count=1 seek=124 of=/dev/block/platform/omap/omap_hsmmc.0/by-name/param";
 	private static final String unlockCommand =
-    	 "echo -n '\\x00' |  dd obs=1 count=1 seek=124 of=/dev/block/platform/omap/omap_hsmmc.0/by-name/param";
+    	 "echo -n '\\x00' |  /system/bin/dd obs=1 count=1 seek=124 of=/dev/block/platform/omap/omap_hsmmc.0/by-name/param";
 	
 	
     /** checks if we know how to lock/unlock the bootloader on this device */
@@ -47,7 +54,7 @@ public class bootLoader {
 
     
     /** Locks or unlocks the bootloader */
-    public static void setLockStatus(boolean newState) throws IOException {
+    public static void setLockState(boolean newState) throws IOException {
     	if (!checkCompatibleDevice()) {
     		return;
     	}
@@ -62,8 +69,8 @@ public class bootLoader {
     }
  
     
-    /** Finds out (from the param partition if the bootloader is unlocked */
-    public static int getBootloaderState() {
+    /** Finds out (from the param partition) if the bootloader is unlocked */
+    public static int getLockState() {
 		Process p;
 
 		if (checkCompatibleDevice()) {
