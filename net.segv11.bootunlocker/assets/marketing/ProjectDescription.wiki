@@ -64,3 +64,5 @@ limitations under the License.
 
 	* Email [mailto://support@segv11.net support@segv11.net]
 
+
+(If you have a _toroplus_ (Sprint Galaxy Nexus) and would like to help me make this app available for your device, please contact me for support.)
