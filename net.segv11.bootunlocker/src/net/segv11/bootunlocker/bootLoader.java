@@ -43,6 +43,8 @@ public class bootLoader {
     		return true;      	
     	} else if (android.os.Build.DEVICE.equals("toro")) {
     		return true;
+    	} else if (android.os.Build.DEVICE.equals("toroplus")) {
+    		return true;
     	} else {
     		return false;
     	}

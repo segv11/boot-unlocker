@@ -2,7 +2,7 @@
 == !BootUnlocker for Galaxy Nexus -- Unlock your bootloader without fastboot. ==
 
 
-This application *REQUIRES* a Galaxy Nexus (_maguro_ or _toro_) with root.
+This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_) with root.
 
 --------
 

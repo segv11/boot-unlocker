@@ -1,7 +1,7 @@
 #labels Featured
 == !BootUnlocker for Galaxy Nexus -- Unlock your bootloader without fastboot. ==
 
-This application *REQUIRES* a Galaxy Nexus (_maguro_ or _toro_) with root.
+This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_) with root.
 
 --------
 
@@ -64,5 +64,3 @@ limitations under the License.
 
 	* Email [mailto://support@segv11.net support@segv11.net]
 
-
-(If you have a _toroplus_ (Sprint Galaxy Nexus) and would like to help me make this app available for your device, please contact me for support.)
