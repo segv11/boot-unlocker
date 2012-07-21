@@ -8,7 +8,7 @@ This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_) with
 
 _!BootUnlocker for Galaxy Nexus_ avoids using `fastboot oem unlock`, with its associated
 `userdata` wipe by writing directly to the `param` partition of your device's internal storage.
-The _PRIMELA03_ bootloader stores the lock status at position` 0x000007C` (124 decimal)
+The Galaxy Nexus bootloader stores the lock status at position` 0x000007C` (124 decimal)
 of this partition: fastboot updates this when locking and unlocking the bootloader.
    
 _!BootUnlocker_ uses root privileges to write to that location directly, bypassing fastboot.

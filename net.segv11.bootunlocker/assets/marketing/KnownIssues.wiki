@@ -1,4 +1,4 @@
-=== Known issues as of version 1.0 ===
+=== Known issues as of version 1.1 ===
 
- * Users of ChainsDD's Superuser app may experience duplicate Superuser requests.
+ * Some users may experience a race condition where the display does not immediately update after locking or unlocking the bootloader.  Changing device orientation or restarting the app will update the display.
  
