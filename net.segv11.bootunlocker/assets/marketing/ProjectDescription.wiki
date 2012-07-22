@@ -49,7 +49,7 @@ limitations under the License.
 
     * Source Code: http://code.google.com/p/boot-unlocker-gnex/source/browse/net.segv11.bootunlocker
 
-    * XDA Developers: http://forum.xda-developers.com/showthread.php?p=27878074
+    * XDA Developers: http://forum.xda-developers.com/showthread.php?t=1731993
 
 
 ==== Downloads ====
