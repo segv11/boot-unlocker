@@ -24,7 +24,8 @@ public class bootLoader {
 	
 	// how long to wait after calling su to update param
 	// before we update the UI:
-	public static final long delayAfterChange = 150;	// 150ms
+	public static final long delayAfterChange = 200;	// 200ms
+	private static final long launchDelay = 30;	// 30ms
 
 	/** For logging */
 	private static final String TAG = "net.segv11.bootloader";
@@ -72,9 +73,16 @@ public class bootLoader {
 	    // BufferedReader r = new BufferedReader(new InputStreamReader(process.getInputStream()));
 	    w.writeBytes(writeCommand+ outByte +"\n");
 	    w.flush();
+	    
+	    // Wait for the command to launch
+    	try {
+			Thread.sleep(launchDelay);
+		} catch (InterruptedException e) {
+			// Should not happen; if it does, we just keep going.
+			e.printStackTrace();
+		}
+	    
 	    w.writeByte(outByte);
-	    w.flush();
-	    w.writeBytes("exit\n");
 	    w.flush();
 	    w.close();				
     }

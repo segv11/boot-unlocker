@@ -11,6 +11,7 @@ You know that in order to prevent an unauthorized user from accessing your data 
 
 
 
+
 [B][U]License[/U][/B]
 [I]BootUnlocker for Galaxy Nexus[/I] is Open Source Software, licensed under the Apache License, Version 2.0:
 [URL]http://www.apache.org/licenses/LICENSE-2.0.html[/URL].

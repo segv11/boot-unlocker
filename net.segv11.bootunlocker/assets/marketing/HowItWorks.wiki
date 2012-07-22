@@ -8,7 +8,7 @@ This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_) with
 
 _!BootUnlocker for Galaxy Nexus_ avoids using `fastboot oem unlock`, with its associated
 `userdata` wipe by writing directly to the `param` partition of your device's internal storage.
-The Galaxy Nexus bootloader stores the lock status at position` 0x000007C` (124 decimal)
+The _PRIMELA03_ bootloader stores the lock status at position` 0x000007C` (124 decimal)
 of this partition: fastboot updates this when locking and unlocking the bootloader.
    
 _!BootUnlocker_ uses root privileges to write to that location directly, bypassing fastboot.
@@ -23,11 +23,14 @@ analysis (
 [http://forum.xda-developers.com/member.php?u=316838 Archpope],
 [http://forum.xda-developers.com/member.php?u=3682533 AdamOutler],
 [http://forum.xda-developers.com/member.php?u=1566190 efrant], 
-[http://forum.xda-developers.com/member.php?u=2716223 NCguy], and
-[http://forum.xda-developers.com/member.php?u=2950618 Raftysworld]
+[http://forum.xda-developers.com/member.php?u=2716223 NCguy], 
+[http://forum.xda-developers.com/member.php?u=2950618 Raftysworld],
+and others
 ), as well as to the beta testers of this application (
-[http://forum.xda-developers.com/member.php?u=1566190 efrant] and 
-[http://forum.xda-developers.com/member.php?u=4621394 Mach3.2]
+[http://forum.xda-developers.com/member.php?u=1566190 efrant], 
+[http://forum.xda-developers.com/member.php?u=4621394 Mach3.2],
+[http://forum.xda-developers.com/member.php?u=2740566 Meep70],
+and others
 ). This application could not have been written without their contributions.
 
 For more details and discussion about _!BootUnlocker for Galaxy Nexus_, follow this project

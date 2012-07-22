@@ -20,6 +20,8 @@ This allows you to keep your bootloader locked for security, with this applicati
 safely protected behind your lockscreen password.  Whenever you want to unlock or
 relock your bootloader, just unlock your screen and run _!BootUnlocker_. 
 
+
+
 --------
 
 ==== License ====

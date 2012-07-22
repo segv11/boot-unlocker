@@ -1,8 +1,8 @@
-=== Version 1.1 ===
+=== Version 1.1: ===
  * Adds support for "toroplus" (Sprint Galaxy Nexus)
  * Corrects multiple-su-request issue for users of ChainsDD's Superuser app
 
-=== Version 1.0 ===
+=== Version 1.0: ===
  * Initial Release on XDA and Play Store
 
 === Version 0.9 Beta: ===
