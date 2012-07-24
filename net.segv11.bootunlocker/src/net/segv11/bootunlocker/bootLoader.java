@@ -107,8 +107,8 @@ public class bootLoader {
 		    w.writeBytes(queryCommand+"\n");
 		    w.flush();
 		    int isLocked = r.readByte();
-		    w.writeBytes("exit\n");
-		    w.flush();
+		    // w.writeBytes("exit\n");
+		    // w.flush();
 		    w.close();				
 			
 			
