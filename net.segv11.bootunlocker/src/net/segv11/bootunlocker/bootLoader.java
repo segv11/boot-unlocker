@@ -39,6 +39,8 @@ public class bootLoader {
     		return new bootLoader_Gnex();
     	} else if (android.os.Build.DEVICE.equals("toroplus")) {
     		return new bootLoader_Gnex();
+    	} else if (android.os.Build.DEVICE.equals("manta")) {
+    		return new bootLoader_N10();
     	} else {
     		return null;
     	}
