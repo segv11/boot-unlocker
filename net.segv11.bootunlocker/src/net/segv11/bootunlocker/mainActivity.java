@@ -15,6 +15,7 @@ public class mainActivity extends Activity {
 
 	/** For logging */
 	private static final String TAG = "net.segv11.mainActivity";
+	private bootLoader theBootLoader = null;
 
     /** Called when the activity is first created. */
     @Override
@@ -30,6 +31,7 @@ public class mainActivity extends Activity {
 		Log.v(TAG, "handling onStart ");
     	Boolean setState = false;
     	Boolean desiredState = false;
+    	theBootLoader = bootLoader.makeBootLoader();
     	new AsyncBootLoader().execute(setState, desiredState);
    }
 
@@ -62,14 +64,14 @@ public class mainActivity extends Activity {
     		Boolean desiredState = booleans[1];
 
     		// If this device is incompatible, return immediately.
-    		if (! bootLoader.checkCompatibleDevice()) {
+    		if (theBootLoader == null) {
     			return R.string.stat_unknown_device;
     		}
 
     		// If we need to change the bootloader state, then do so.
     		if (setState) {
     	    	try {
-    	        	bootLoader.setLockState(desiredState);
+    	    		theBootLoader.setLockState(desiredState);
     			} catch (IOException e) {
     				if (desiredState) {
     					Log.e(TAG, "Caught IOException locking: " + e);
@@ -91,7 +93,7 @@ public class mainActivity extends Activity {
     		
     		
     		// Now query the bootloader lock state.
-			int blState = bootLoader.getLockState();
+			int blState = theBootLoader.getLockState();
 	
 			if (blState == bootLoader.BL_UNLOCKED) {
 				return R.string.stat_unlocked;
