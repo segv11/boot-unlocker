@@ -1,17 +1,18 @@
 #labels Featured
-== !BootUnlocker for Galaxy Nexus -- Unlock your bootloader without fastboot. ==
+== !BootUnlocker for Nexus Devices -- Unlock your bootloader without fastboot. ==
 
 
-This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_) with root.
+This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_) or Nexus 10 (_manta_), with root.
 
 --------
 
-_!BootUnlocker for Galaxy Nexus_ avoids using `fastboot oem unlock`, with its associated
+_!BootUnlocker for Nexus Devices_ avoids using `fastboot oem unlock`, with its associated
 `userdata` wipe by writing directly to the `param` partition of your device's internal storage.
-The _PRIMELA03_ bootloader stores the lock status at position` 0x000007C` (124 decimal)
-of this partition: fastboot updates this when locking and unlocking the bootloader.
+On the Galaxy Nexus, the _PRIMELA03_ bootloader stores the lock status at position `0x000007C`
+(124 decimal) of this partition: fastboot updates this when locking and unlocking the bootloader.
+On the Nexus 10, the _MANTALJ12_ bootloader uses position `0x0000224` (548 decimal).
    
-_!BootUnlocker_ uses root privileges to write to that location directly, bypassing fastboot.
+_!BootUnlocker_ uses root privileges to write to the appropriate location directly, bypassing fastboot.
 This allows you to lock and unlock your bootloader from within
 Android, without wiping your `userdata` partition.
 
@@ -33,5 +34,5 @@ and others
 and others
 ). This application could not have been written without their contributions.
 
-For more details and discussion about _!BootUnlocker for Galaxy Nexus_, follow this project
+For more details and discussion about _!BootUnlocker for Nexus Devices_, follow this project
 on Google Code, or subscribe the application's XDA thread: http://forum.xda-developers.com/showthread.php?p=27878074

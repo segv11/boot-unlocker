@@ -1,3 +1,6 @@
+=== Version 1.2 Beta 1: ===
+ * Adds support for "manta" (Nexus 10)
+ 
 === Version 1.1: ===
  * Adds support for "toroplus" (Sprint Galaxy Nexus)
  * Corrects multiple-su-request issue for users of ChainsDD's Superuser app

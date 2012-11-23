@@ -1,19 +1,19 @@
-[B][SIZE="4"]BootUnlocker for Galaxy Nexus -- Unlock your bootloader without fastboot.[/SIZE][/B]
+[B][SIZE="4"]BootUnlocker for Nexus Devices -- Unlock your bootloader without fastboot.[/SIZE][/B]
 
-This application [B]REQUIRES[/B] a Galaxy Nexus ([I]maguro[/I], [I]toro[/I] or [I]toroplus[/I]) with root.
+This application [B]REQUIRES[/B] a Galaxy Nexus ([I]maguro[/I], [I]toro[/I] or [I]toroplus[/I]) or Nexus 10 ([I]manta[/I]), with root.
 
 
-You've rooted your Galaxy Nexus, and you are trying to decide between the security of relocking your bootloader (with stock recovery and USB Debugging off), and the flexibility of leaving it unlocked.
+You've rooted your Galaxy Nexus or Nexus 10, and you are trying to decide between the security of relocking your bootloader (with stock recovery and USB Debugging off), and the flexibility of leaving it unlocked.
 
 You know that in order to prevent an unauthorized user from accessing your data by flashing a custom recovery, "fastboot oem unlock" wipes your data. This also means that if you relock your bootloader, you will need to do a full backup-and-restore whenever you decide to unlock it again.
 
-[I]BootUnlocker for Galaxy Nexus[/I] lets you have the best of both worlds by using root privileges to unlock your bootloader from within Android, without wiping your data. This allows you to keep your bootloader locked for security, with this application safely protected behind your lockscreen password.  Whenever you want to unlock or relock your bootloader, just unlock your screen and run [I]BootUnlocker[/I]. 
+[I]BootUnlocker for Nexus Devices[/I] lets you have the best of both worlds by using root privileges to unlock your bootloader from within Android, without wiping your data. This allows you to keep your bootloader locked for security, with this application safely protected behind your lockscreen password.  Whenever you want to unlock or relock your bootloader, just unlock your screen and run [I]BootUnlocker[/I]. 
 
 
 
 
 [B][U]License[/U][/B]
-[I]BootUnlocker for Galaxy Nexus[/I] is Open Source Software, licensed under the Apache License, Version 2.0:
+[I]BootUnlocker for Nexus Devices[/I] is Open Source Software, licensed under the Apache License, Version 2.0:
 [URL]http://www.apache.org/licenses/LICENSE-2.0.html[/URL].
 You can redistribute, reuse, or modify this software as permitted under this license.
 

@@ -1,5 +1,5 @@
 Play Store Title:
-	BootUnlocker for Galaxy Nexus
+	BootUnlocker for Nexus Devices
 
 Play Store Description:
 	/net.segv11.bootunlocker/assets/marketing/playstore_01_description
@@ -9,7 +9,7 @@ Recent Changes:
 	also include Known Issues: /net.segv11.bootunlocker/assets/marketing/KnownIssues.wiki
 
 Promo Text:
-	[root] BootUnlocker for Galaxy Nexus -- Unlock your bootloader without fastboot
+	[root] BootUnlocker for Nexus Devices -- Unlock your bootloader without fastboot
 
 Application Type:
 	Applications / Tools
@@ -30,6 +30,7 @@ Supported Devices:
 	maguro
 	toro
 	toroplus
+	manta
 	(manually exclude all others -- about 20 devices total)
 	
 Screenshots:	480x854 portrait	(actually 1280x720 and 1280x800 are now allowed too)

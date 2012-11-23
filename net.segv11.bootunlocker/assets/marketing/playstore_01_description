@@ -1,21 +1,21 @@
-BootUnlocker for Galaxy Nexus -- Unlock your bootloader without fastboot!
+BootUnlocker for Nexus Devices -- Unlock your bootloader without fastboot!
 
-This application REQUIRES a Galaxy Nexus (GSM, Verizon, or Sprint) with root.
+This application REQUIRES a Galaxy Nexus (GSM, Verizon, or Sprint) or Nexus 10, with root.
 
 
 
-You've rooted your Galaxy Nexus, and you are trying to decide between the security of relocking your bootloader (with stock recovery and USB Debugging off), and the flexibility of leaving it unlocked.
+You've rooted your Galaxy Nexus or Nexus 10, and you are trying to decide between the security of relocking your bootloader (with stock recovery and USB Debugging off), and the flexibility of leaving it unlocked.
 
 You know that in order to prevent an unauthorized user from accessing your data by flashing a custom recovery, "fastboot oem unlock" wipes your data. This also means that if you relock your bootloader, you will need to do a full backup-and-restore whenever you decide to unlock it again.
 
-BootUnlocker for Galaxy Nexus lets you have the best of both worlds by using root privileges to unlock your bootloader from within Android, without wiping your data. This allows you to keep your bootloader locked for security, with this application safely protected behind your lockscreen password.  Whenever you want to unlock or relock your bootloader, just unlock your screen and run BootUnlocker. 
+BootUnlocker for Nexus Devices lets you have the best of both worlds by using root privileges to unlock your bootloader from within Android, without wiping your data. This allows you to keep your bootloader locked for security, with this application safely protected behind your lockscreen password.  Whenever you want to unlock or relock your bootloader, just unlock your screen and run BootUnlocker. 
 
 
 
 License:
 --------
 
-BootUnlocker for Galaxy Nexus_ is Open Source Software, licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0.html
+BootUnlocker for Nexus Devices_ is Open Source Software, licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0.html
 Source code is available on Google Code: https://code.google.com/p/boot-unlocker-gnex/
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
