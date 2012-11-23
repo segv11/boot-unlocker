@@ -3,6 +3,7 @@ package net.segv11.bootunlocker;
 import java.io.IOException;
 
 import android.app.Activity;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -32,6 +33,22 @@ public class mainActivity extends Activity {
     	Boolean setState = false;
     	Boolean desiredState = false;
     	theBootLoader = bootLoader.makeBootLoader();
+		
+    	TextView versionID = (TextView) findViewById(R.id.versionID);
+		TextView modelID = (TextView) findViewById(R.id.modelID);
+		TextView deviceID = (TextView) findViewById(R.id.deviceID);
+    	TextView bootloaderID = (TextView) findViewById(R.id.bootloaderID);
+    	try {
+			versionID.setText(getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
+			modelID.setText(android.os.Build.MODEL);
+			deviceID.setText(android.os.Build.DEVICE);
+	    	bootloaderID.setText(android.os.Build.BOOTLOADER);
+	    } catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+ 	
     	new AsyncBootLoader().execute(setState, desiredState);
    }
 

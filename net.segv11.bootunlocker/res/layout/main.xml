@@ -68,5 +68,94 @@
 	    android:layout_marginTop="@dimen/small_pad"
 	    android:text=""
 	    android:textColor="@android:color/holo_red_dark" />
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="bottom" >
+
+	    <TextView
+	        android:id="@+id/VersionLine"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/DeviceLine"
+	        android:layout_alignParentLeft="true"
+	        android:text="@string/version" />
+
+	    <TextView
+	        android:id="@+id/DeviceLine"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/BootloaderLine"
+	        android:layout_alignParentLeft="true"
+	        android:text="@string/device" />
+
+	    <TextView
+	        android:id="@+id/BootloaderLine"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:text="@string/bootloader" />
+
+	    <TextView
+	        android:id="@+id/versionID"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/VersionLine"
+	        android:layout_alignBottom="@+id/VersionLine"
+	        android:layout_toRightOf="@+id/VersionLine"
+			android:layout_marginLeft="8dp"
+	        android:text="" />
+
+	    <TextView
+	        android:id="@+id/bootloaderID"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/BootloaderLine"
+	        android:layout_alignBottom="@+id/BootloaderLine"
+	        android:layout_alignLeft="@+id/versionID"
+	        android:text="" />
+
+	    <TextView
+	        android:id="@+id/modelID"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/DeviceLine"
+	        android:layout_alignBottom="@+id/DeviceLine"
+	        android:layout_alignLeft="@+id/versionID"
+	        android:text="" />
+
+	    <TextView
+	        android:id="@+id/par1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/modelID"
+	        android:layout_alignBottom="@+id/modelID"
+	        android:layout_toRightOf="@+id/modelID"
+	        android:layout_marginLeft="5dp"
+	        android:text="(" />
+	    
+	    <TextView
+	        android:id="@+id/deviceID"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/modelID"
+	        android:layout_alignBottom="@+id/modelID"
+	        android:layout_toRightOf="@+id/par1"
+	        android:text=""
+	        android:textStyle="italic" />
+
+		<TextView
+	        android:id="@+id/par2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/modelID"
+	        android:layout_alignBottom="@+id/modelID"
+	        android:layout_toRightOf="@+id/deviceID"
+	        android:text=")"  />
+	    	    
+	
+	</RelativeLayout>
     
 </LinearLayout>
