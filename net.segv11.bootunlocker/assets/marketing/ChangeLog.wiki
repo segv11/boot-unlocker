@@ -1,6 +1,6 @@
-=== Version 1.2 Beta 1: ===
+=== Version 1.2: ===
  * Adds support for "manta" (Nexus 10)
- * Information area in the bottom-left corner
+ * Adds status area (bottom-left) to display information about the device and app.
  
 === Version 1.2 Beta 1: ===
  * Adds support for "manta" (Nexus 10)
