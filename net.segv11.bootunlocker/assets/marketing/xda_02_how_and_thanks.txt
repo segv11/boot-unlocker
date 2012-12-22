@@ -1,5 +1,6 @@
-[I]BootUnlocker for Nexus Devices[/I] avoids using "fastboot oem unlock", with its associated "userdata" wipe by writing directly to the "param" partition of your device's internal storage. On the Galaxy Nexus, the [I]PRIMELA03[/I] bootloader stores the lock status at position [U]0x000007C[/U] (124 decimal) of this partition: fastboot updates this when locking and unlocking the bootloader.
+[I]BootUnlocker for Nexus Devices[/I] avoids using "fastboot oem unlock", with its associated "userdata" wipe by writing directly to the "param" (or "misc") partition of your device's internal storage. On the Galaxy Nexus, the [I]PRIMELA03[/I] bootloader stores the lock status at position [U]0x000007C[/U] (124 decimal) of this partition: fastboot updates this when locking and unlocking the bootloader.
 On the Nexus 10, the [I]MANTALJ12[/I] bootloader uses position [U]0x0000224[/U] (548 decimal).
+On the Nexus 4, the [I]MAKOZ10l[/I] bootloader uses position [U]0x0004010[/U] (16400 decimal) of the "misc" parition.
    
 [I]BootUnlocker[/I] uses root privileges to write to to the appropriate location directly, bypassing fastboot. This allows you to lock and unlock your bootloader from within Android, without wiping your "userdata" partition.
 
