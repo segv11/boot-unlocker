@@ -41,6 +41,8 @@ public class bootLoader {
     		return new bootLoader_Gnex();
     	} else if (android.os.Build.DEVICE.equals("manta")) {
     		return new bootLoader_N10();
+    	} else if (android.os.Build.DEVICE.equals("mako")) {
+    		return new bootLoader_N4();
     	} else {
     		return null;
     	}
