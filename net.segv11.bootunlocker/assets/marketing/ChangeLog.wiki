@@ -26,7 +26,7 @@
  * New launcher icons and screenshots
 
 === Version 0.7 Beta: ===
- * Device restrictions in the Manifest to prevent installation on many non-Galaxy Nexus devuces
+ * Device restrictions in the Manifest to prevent installation on many non-Galaxy Nexus devices
 
 === Version 0.6 Beta: ===
  * Checks that you have a "toro" or "maguro" device before doing anything.
