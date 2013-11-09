@@ -59,6 +59,8 @@ public class bootLoader {
     		return new bootLoader_N10();
     	} else if (android.os.Build.DEVICE.equals("mako")) {
     		return new bootLoader_N4();
+    	} else if (android.os.Build.DEVICE.equals("hammerhead")) {
+    		return new bootLoader_N5();
     	} else {
     		return null;
     	}
