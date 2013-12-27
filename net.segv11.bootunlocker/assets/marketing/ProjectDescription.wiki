@@ -1,11 +1,13 @@
 #labels Featured
 == !BootUnlocker for Nexus Devices -- Unlock your bootloader without fastboot. ==
 
-This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_), Nexus 4 (_mako_), Nexus 5 (_hammerhead_), or Nexus 10 (_manta_), with root.
+This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_), Nexus 4 (_mako_),
+Nexus 5 (_hammerhead_), Nexus 7 2013 (_flo_ or _deb_), or Nexus 10 (_manta_), with root.
 
 --------
 
-You've rooted your Galaxy Nexus, Nexus 4, or Nexus 10, and you are trying to decide between the security of relocking
+You've rooted your Galaxy Nexus, Nexus 4, Nexus 5, Nexus 7 (2013), or Nexus 10,
+and you are trying to decide between the security of relocking
 your bootloader (with stock recovery and USB Debugging off), and the flexibility
 of leaving it unlocked.
 
