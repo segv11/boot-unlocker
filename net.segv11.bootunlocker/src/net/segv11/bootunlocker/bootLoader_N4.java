@@ -36,7 +36,7 @@ public class bootLoader_N4 extends bootLoader {
 	/** For logging */
 	private static final String TAG = "net.segv11.bootLoader_N4";
 	
-	/** Private constants for working with the lock state in the param partition
+	/** Private constants for working with the lock state in the misc partition
 	 */
 	private static final String queryCommand =
 		"dd ibs=1 count=1 skip=16400 if=/dev/block/platform/msm_sdcc.1/by-name/misc  # query "; 

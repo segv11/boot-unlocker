@@ -61,6 +61,10 @@ public class bootLoader {
     		return new bootLoader_N4();
     	} else if (android.os.Build.DEVICE.equals("hammerhead")) {
     		return new bootLoader_N5();
+    	} else if (android.os.Build.DEVICE.equals("flo")) {
+    		return new bootLoader_N7_2013();
+    	} else if (android.os.Build.DEVICE.equals("deb")) {
+    		return new bootLoader_N7_2013();
     	} else {
     		return null;
     	}
