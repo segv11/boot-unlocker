@@ -3,8 +3,6 @@
  */
 package net.segv11.bootunlocker;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 
 import android.util.Log;
