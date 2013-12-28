@@ -57,7 +57,13 @@ public class bootLoader_N5 extends bootLoader {
     }
  
     
-    /** Finds out (from the misc partition) if the bootloader is unlocked */
+    /** Does this bootloader support a tamper flag? */
+    @Override
+    public boolean hasTamperFlag() {
+    	return true;
+    }
+    
+    /** Finds out  if the bootloader is unlocked and if the tamper flag is set */
     @Override
     public int getBootLoaderState() {
 		try {

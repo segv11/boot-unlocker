@@ -188,8 +188,12 @@ public class mainActivity extends Activity {
     	protected void onPostExecute(Integer resultObj) {
     		int result = resultObj.intValue();
   			TextView bootLoaderStatusText = (TextView) findViewById(R.id.bootLoaderStatusText);
+  			TextView bootLoaderTamperFlagText = (TextView) findViewById(R.id.tamperFlagText);
   			Button lockButton = (Button) findViewById(R.id.lockButton);
   			Button unlockButton = (Button) findViewById(R.id.unlockButton);
+  			Button setButton = (Button) findViewById(R.id.setButton);
+  			Button clearButton = (Button) findViewById(R.id.clearButton);
+
   			TextView extendedStatus = (TextView) findViewById(R.id.extendedStatus);
   			LinearLayout tamperLL= (LinearLayout) findViewById(R.id.tamperLayout);
  
@@ -220,15 +224,20 @@ public class mainActivity extends Activity {
 			
 			if (theBootLoader.hasTamperFlag()) {				
 				if (result == bootLoader.BL_LOCKED || result == bootLoader.BL_UNLOCKED) {
-					bootLoaderStatusText.setText(R.string.stat_not_tampered);
-					// change Set/Clear buttons
+					bootLoaderTamperFlagText.setText(R.string.stat_not_tampered);
+	  				setButton.setEnabled(true);
+	  				clearButton.setEnabled(true);
 				} else if (result == bootLoader.BL_LOCKED || result == bootLoader.BL_UNLOCKED) {
-					bootLoaderStatusText.setText(R.string.stat_tampered);
-					// change Set/Clear buttons
+					bootLoaderTamperFlagText.setText(R.string.stat_tampered);
+	  				setButton.setEnabled(true);
+	  				clearButton.setEnabled(true);
+				} else {
+	  				setButton.setEnabled(false);
+	  				clearButton.setEnabled(false);
 				}
+				tamperLL.setVisibility(View.VISIBLE);
 			} else {
-				// change Set/Clear buttons
-				//tamperLL.setVisibility(android:visibility:gone)
+				tamperLL.setVisibility(View.GONE);
 			}
   			
     	}
