@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -33,7 +34,8 @@ public class mainActivity extends Activity {
 	/** For logging */
 	private static final String TAG = "net.segv11.mainActivity";
 	private bootLoader theBootLoader = null;
-
+	private static final Boolean dontCare = false;
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,9 @@ public class mainActivity extends Activity {
     	super.onStart();
 		Log.v(TAG, "handling onStart ");
     	Boolean setState = false;
-    	Boolean desiredState = false;
+    	Boolean desiredState = dontCare;
+    	Boolean setTamperFlag = false;
+    	Boolean desiredTamperFlag = dontCare;
     	theBootLoader = bootLoader.makeBootLoader();
 		
     	TextView versionID = (TextView) findViewById(R.id.versionID);
@@ -65,21 +69,43 @@ public class mainActivity extends Activity {
 		}
 
  	
-    	new AsyncBootLoader().execute(setState, desiredState);
+    	new AsyncBootLoader().execute(setState, desiredState, setTamperFlag, desiredTamperFlag);
    }
 
     /** Called from UI to unlock the bootloader */
     public void doUnlockBootloader(View v) {
     	Boolean setState = true;
     	Boolean desiredState = false;
-    	new AsyncBootLoader().execute(setState, desiredState);
+    	Boolean setTamperFlag = false;
+    	Boolean desiredTamperFlag = dontCare;
+    	new AsyncBootLoader().execute(setState, desiredState, setTamperFlag, desiredTamperFlag);
     }
     
     /** Called from UI to lock the bootloader */
     public void doLockBootloader(View v) {
     	Boolean setState = true;
     	Boolean desiredState = true;
-    	new AsyncBootLoader().execute(setState, desiredState);
+    	Boolean setTamperFlag = false;
+    	Boolean desiredTamperFlag = dontCare;
+    	new AsyncBootLoader().execute(setState, desiredState, setTamperFlag, desiredTamperFlag);
+    }
+
+    /** Called from UI to clear tamper flag */
+    public void doClearTamper(View v) {
+    	Boolean setState = false;
+    	Boolean desiredState = dontCare;
+    	Boolean setTamperFlag = true;
+    	Boolean desiredTamperFlag = false;
+    	new AsyncBootLoader().execute(setState, desiredState, setTamperFlag, desiredTamperFlag);
+    }
+    
+    /** Called from UI to set tamper flag */
+    public void doSetTamper(View v) {
+    	Boolean setState = false;
+    	Boolean desiredState = dontCare;
+    	Boolean setTamperFlag = true;
+    	Boolean desiredTamperFlag = true;
+    	new AsyncBootLoader().execute(setState, desiredState, setTamperFlag, desiredTamperFlag);
     }
 
   
@@ -95,10 +121,12 @@ public class mainActivity extends Activity {
     	protected Integer doInBackground(Boolean...booleans) {
     		Boolean setState = booleans[0];
     		Boolean desiredState = booleans[1];
+    		Boolean setTamperFlag = booleans[2];
+    		Boolean desiredTamperFlag = booleans[3];
 
     		// If this device is incompatible, return immediately.
     		if (theBootLoader == null) {
-    			return R.string.stat_unknown_device;
+    			return Integer.valueOf(bootLoader.BL_UNSUPPORTED_DEVICE);
     		}
 
     		// If we need to change the bootloader state, then do so.
@@ -123,18 +151,32 @@ public class mainActivity extends Activity {
 					e.printStackTrace();
 				}
     		}
+ 
+      		if (theBootLoader.hasTamperFlag() && setTamperFlag) {
+    	    	try {
+    	    		theBootLoader.setTamperFlag(desiredTamperFlag);
+    			} catch (IOException e) {
+    				if (desiredTamperFlag) {
+    					Log.e(TAG, "Caught IOException setting tamper flag: " + e);
+    				} else {
+    					Log.e(TAG, "Caught IOException clearing tamper flag: " + e);
+    				}
+    			}
+    	    	
+    	    	// Since we changed the bootloader tamper flag, we will pause for
+    	    	// it to take effect.  This is OK because we are on a background
+    	    	// thread.
+    	    	try {
+					Thread.sleep(bootLoader.delayAfterChange);
+				} catch (InterruptedException e) {
+					// Should not happen; if it does, we just keep going.
+					e.printStackTrace();
+				}
+    		}
+ 
     		
-    		
-    		// Now query the bootloader lock state.
-			int blState = theBootLoader.getLockState();
-	
-			if (blState == bootLoader.BL_UNLOCKED) {
-				return R.string.stat_unlocked;
-			} else if (blState == bootLoader.BL_LOCKED) {
-				return R.string.stat_locked;
-			} else {
-				return R.string.stat_no_root;
-			}
+    		// Now query the bootloader lock state and tamper flag.
+			return Integer.valueOf(theBootLoader.getBootLoaderState());
     	}
 
     	
@@ -143,33 +185,52 @@ public class mainActivity extends Activity {
     	 *  taking that long
     	 */
     	@Override
-    	protected void onPostExecute(Integer result) {
+    	protected void onPostExecute(Integer resultObj) {
+    		int result = resultObj.intValue();
   			TextView bootLoaderStatusText = (TextView) findViewById(R.id.bootLoaderStatusText);
   			Button lockButton = (Button) findViewById(R.id.lockButton);
   			Button unlockButton = (Button) findViewById(R.id.unlockButton);
   			TextView extendedStatus = (TextView) findViewById(R.id.extendedStatus);
-  			
-  			bootLoaderStatusText.setText(result);
-  			if ( result.equals(R.string.stat_locked) ) { 
+  			LinearLayout tamperLL= (LinearLayout) findViewById(R.id.tamperLayout);
+ 
+			if (result == bootLoader.BL_UNLOCKED || result == bootLoader.BL_TAMPERED_UNLOCKED) {
+				bootLoaderStatusText.setText(R.string.stat_unlocked);
   				lockButton.setEnabled(true);
   				unlockButton.setEnabled(true);
   				extendedStatus.setText("");
-  			} else if ( result.equals(R.string.stat_unlocked) ) {
+			} else if (result == bootLoader.BL_LOCKED || result == bootLoader.BL_TAMPERED_LOCKED) {
+				bootLoaderStatusText.setText(R.string.stat_locked);
   				lockButton.setEnabled(true);
   				unlockButton.setEnabled(true);
   				extendedStatus.setText("");
-  			} else if ( result.equals(R.string.stat_unknown_device ) ) {
+			} else if (result == bootLoader.BL_UNSUPPORTED_DEVICE){
+				bootLoaderStatusText.setText(R.string.stat_unknown_device);
   				lockButton.setEnabled(false);
   				unlockButton.setEnabled(false);
   				Resources res = getResources();
   				extendedStatus.setText(String.format(
   						res.getString(R.string.extra_unknown_device),
   						android.os.Build.DEVICE));
-  			} else {
+			} else {
+				bootLoaderStatusText.setText(R.string.stat_no_root);
   				lockButton.setEnabled(false);
   				unlockButton.setEnabled(false);
   				extendedStatus.setText("");
-  			}
+			}
+			
+			if (theBootLoader.hasTamperFlag()) {				
+				if (result == bootLoader.BL_LOCKED || result == bootLoader.BL_UNLOCKED) {
+					bootLoaderStatusText.setText(R.string.stat_not_tampered);
+					// change Set/Clear buttons
+				} else if (result == bootLoader.BL_LOCKED || result == bootLoader.BL_UNLOCKED) {
+					bootLoaderStatusText.setText(R.string.stat_tampered);
+					// change Set/Clear buttons
+				}
+			} else {
+				// change Set/Clear buttons
+				//tamperLL.setVisibility(android:visibility:gone)
+			}
+  			
     	}
     }
     

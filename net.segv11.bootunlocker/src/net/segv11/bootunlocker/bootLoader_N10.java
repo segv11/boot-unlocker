@@ -59,7 +59,7 @@ public class bootLoader_N10 extends bootLoader {
     
     /** Finds out (from the param partition) if the bootloader is unlocked */
     @Override
-    public int getLockState() {
+    public int getBootLoaderState() {
 		try {
     		Log.v(TAG, "Getting bootloader state with " + queryCommand);
     		

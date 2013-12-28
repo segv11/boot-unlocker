@@ -34,9 +34,12 @@ public class bootLoader {
 	// TODO: JavaDoc
 	
 	/** constants describing bootloader state */
+	public static final int BL_UNSUPPORTED_DEVICE = -2;
+	public static final int BL_UNKNOWN = -1;
 	public static final int BL_UNLOCKED = 0;
 	public static final int BL_LOCKED = 1;
-	public static final int BL_UNKNOWN = 2;
+	public static final int BL_TAMPERED_UNLOCKED = 2;
+	public static final int BL_TAMPERED_LOCKED = 3;
 	
 	// how long to wait after calling su to update param
 	// before we update the UI:
@@ -71,6 +74,11 @@ public class bootLoader {
     	// TODO: Should we check android.os.Build.BOOTLOADER ?
     }
 
+    /** Does this bootloader support a tamper flag? */
+    public boolean hasTamperFlag() {
+    	// We override this in relevant subclasses
+    	return false;
+    }
     
     /** Locks or unlocks the bootloader */
     public void setLockState(boolean newState) throws IOException {
@@ -78,9 +86,14 @@ public class bootLoader {
     	return;
     }
   
-    
-    /** Finds out (from the param partition) if the bootloader is unlocked */
-    public int getLockState() {
+    /** Sets or clears the tamper flag */
+    public void setTamperFlag(boolean newState) throws IOException {
+    	// We override this in relevant subclasses
+    	return;
+    }
+  
+    /** Finds out  if the bootloader is unlocked and if the tamper flag is set */
+    public int getBootLoaderState() {
     	// We override this in subclasses
 		return BL_UNKNOWN;
    }
