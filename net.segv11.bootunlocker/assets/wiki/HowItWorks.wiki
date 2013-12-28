@@ -1,0 +1,40 @@
+#labels Featured
+== !BootUnlocker for Nexus Devices -- Unlock your bootloader without fastboot. ==
+
+
+This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_), Nexus 4 (_mako_), Nexus 5 (_hammerhead_), Nexus 7 2013 (_deb_ or _flo_), or Nexus 10 (_manta_), with root.
+
+--------
+
+_!BootUnlocker for Nexus Devices_ avoids using `fastboot oem unlock`, with its associated
+`userdata` wipe by writing directly to the `param`  (or `misc`, or `aboot`) partition of your device's internal storage.
+On the Galaxy Nexus, the bootloader stores the lock status at position `0x000007C`
+(124 decimal) of this partition: fastboot updates this when locking and unlocking the bootloader.
+On the Nexus 10, the bootloader uses position `0x0000224` (548 decimal).
+On the Nexus 4 and Nexus 5, the bootloader uses position `0x0004010` (16400 decimal) of the `misc` parition.
+On the Nexus 7 2013 the bootloader uses position `0x04FFC00` (5241856 decimal) of the `aboot` parition.
+   
+_!BootUnlocker_ uses root privileges to write to the appropriate location directly, bypassing fastboot.
+This allows you to lock and unlock your bootloader from within
+Android, without wiping your `userdata` partition.
+
+
+The technique used was discovered through the efforts of several contributors on
+[http://forum.xda-developers.com/showthread.php?t=1650830&page=13 an XDA thread].
+Special thanks go to those who posted raw images of their `param` partitions for
+analysis (
+[http://forum.xda-developers.com/member.php?u=316838 Archpope],
+[http://forum.xda-developers.com/member.php?u=3682533 AdamOutler],
+[http://forum.xda-developers.com/member.php?u=1566190 efrant], 
+[http://forum.xda-developers.com/member.php?u=2716223 NCguy], 
+[http://forum.xda-developers.com/member.php?u=2950618 Raftysworld],
+and others
+), as well as to the beta testers of this application (
+[http://forum.xda-developers.com/member.php?u=1566190 efrant], 
+[http://forum.xda-developers.com/member.php?u=4621394 Mach3.2],
+[http://forum.xda-developers.com/member.php?u=2740566 Meep70],
+and others
+). This application could not have been written without their contributions.
+
+For more details and discussion about _!BootUnlocker for Nexus Devices_, follow this project
+on Google Code, or subscribe the application's XDA thread: http://forum.xda-developers.com/showthread.php?p=27878074
