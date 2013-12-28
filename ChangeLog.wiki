@@ -1,0 +1,46 @@
+=== Version 1.5beta1: ===
+ * Experimental support for "flo" and "deb" (Nexus 7 2013)
+
+=== Version 1.3: ===
+ * Adds support for "hammerhead" (Nexus 5)
+
+=== Version 1.3.2 Beta: ===
+ * Experimental support for "hammerhead" (Nexus 5)
+
+=== Version 1.3: ===
+ * Adds support for "mako" (Nexus 4)
+
+=== Version 1.2.5 Beta: ===
+ * Experimental support for "mako" (Nexus 4)
+
+=== Version 1.2: ===
+ * Adds support for "manta" (Nexus 10)
+ * Adds status area (bottom-left) to display information about the device and app.
+ 
+=== Version 1.2 Beta 1: ===
+ * Adds support for "manta" (Nexus 10)
+ 
+=== Version 1.1: ===
+ * Adds support for "toroplus" (Sprint Galaxy Nexus)
+ * Corrects multiple-su-request issue for users of ChainsDD's Superuser app
+
+=== Version 1.0: ===
+ * Initial Release on XDA and Play Store
+
+=== Version 0.9 Beta: ===
+ * Fixed race conditions from exec()ing su on the main thread
+ * Removed the need for busybox
+
+=== Version 0.8 Beta: ===
+ * New launcher icons and screenshots
+
+=== Version 0.7 Beta: ===
+ * Device restrictions in the Manifest to prevent installation on many non-Galaxy Nexus devices
+
+=== Version 0.6 Beta: ===
+ * Checks that you have a "toro" or "maguro" device before doing anything.
+ * Makes diagnostic output to logcat.
+ * Various code cleanups
+
+=== Version 0.5 ALPHA: ===
+ * Initial Release
