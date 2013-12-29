@@ -58,7 +58,8 @@
         android:id="@+id/tamperLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:visibility="invisible" >
     
     <LinearLayout
         android:layout_marginTop="@dimen/small_pad"
