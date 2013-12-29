@@ -6,8 +6,8 @@ Play Store Description:
 	/net.segv11.bootunlocker/assets/marketing/playstore_01_description
 
 Recent Changes:
-	Reformat from /net.segv11.bootunlocker/assets/marketing/changelog.txt
-	also include Known Issues: /net.segv11.bootunlocker/assets/marketing/KnownIssues.wiki
+	Reformat from /net.segv11.bootunlocker/assets/wiki/changelog.txt
+	also include Known Issues: /net.segv11.bootunlocker/assets/wiki/KnownIssues.wiki
 
 Promo Text:
 	[root] BootUnlocker for Nexus Devices -- Unlock your bootloader without fastboot

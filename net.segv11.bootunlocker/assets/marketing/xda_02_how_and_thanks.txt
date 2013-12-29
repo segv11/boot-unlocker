@@ -2,6 +2,8 @@
 On the Nexus 10, the bootloader uses position [U]0x0000224[/U] (548 decimal).
 On the Nexus 4 and Nexus 5, the bootloader uses position [U]0x0004010[/U] (16400 decimal) of the "misc" parition.
 On the Nexus 7 (2013), the bootloader uses position [U]0x04FFC00[/U] (5241856 decimal) of the "aboot" parition. 
+The Nexus 4 and Nexus 5 bootloaders also keep a "Tamper" flag at position [U]0x0004010[/U] (16400 decimal) of the "misc" parition. [I]BootUnlocker for Nexus Devices[/I] can set and clear this flag too.
+
    
 [I]BootUnlocker[/I] uses root privileges to write to to the appropriate location directly, bypassing fastboot. This allows you to lock and unlock your bootloader from within Android, without wiping your "userdata" partition.
 
