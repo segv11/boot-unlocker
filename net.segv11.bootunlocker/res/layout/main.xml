@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_margin="@dimen/small_margin"
     android:gravity="bottom"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    tools:ignore="ButtonStyle" >
 
     <ScrollView
         android:id="@+id/ScollB"
@@ -206,7 +208,8 @@
             android:layout_gravity="left"
             android:layout_marginLeft="5dp"
             android:layout_row="1"
-            android:text="(" />
+            android:text="("
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/deviceID"
@@ -221,7 +224,8 @@
             android:layout_column="4"
             android:layout_gravity="left"
             android:layout_row="1"
-            android:text=")" />
+            android:text=")"
+            tools:ignore="HardcodedText" />
 
         <Space
             android:layout_column="4"
