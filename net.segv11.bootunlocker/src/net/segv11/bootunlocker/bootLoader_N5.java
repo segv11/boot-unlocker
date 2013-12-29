@@ -37,10 +37,15 @@ public class bootLoader_N5 extends bootLoader {
 	/** Private constants for working with the lock state in the misc partition
 	 */
 	private static final String queryCommand =
-		"dd ibs=1 count=1 skip=16400 if=/dev/block/platform/msm_sdcc.1/by-name/misc  # query "; 
+			"dd ibs=1 count=1 skip=16400 if=/dev/block/platform/msm_sdcc.1/by-name/misc  # query "; 
 	private static final String writeCommand =
-	     "dd obs=1 count=1 seek=16400 of=/dev/block/platform/msm_sdcc.1/by-name/misc # write ";
-    
+			"dd obs=1 count=1 seek=16400 of=/dev/block/platform/msm_sdcc.1/by-name/misc # write ";
+
+	private static final String queryTamperCommand =
+			"dd ibs=1 count=1 skip=16404 if=/dev/block/platform/msm_sdcc.1/by-name/misc  # query "; 
+	private static final String writeTamperCommand =
+			"dd obs=1 count=1 seek=16404 of=/dev/block/platform/msm_sdcc.1/by-name/misc # write ";
+
     /** Locks or unlocks the bootloader */
     @Override
     public void setLockState(boolean newState) throws IOException { 	
@@ -56,26 +61,51 @@ public class bootLoader_N5 extends bootLoader {
     	superUserCommandWithDataByte(writeCommand, outByte);
     }
  
-    
     /** Does this bootloader support a tamper flag? */
     @Override
     public boolean hasTamperFlag() {
     	return true;
     }
     
+    /** Sets or clears the tamper flag */
+    @Override
+    public void setTamperFlag(boolean newState) throws IOException {
+    	int outByte;
+    	if (newState) {
+    		outByte = 1;
+    		Log.i(TAG, "Setting tamper flag by sending " + outByte + " to " + writeTamperCommand);
+    	} else {
+    		outByte = 0;
+    		Log.i(TAG, "Clearing tamper flag by sending " + outByte + " to " + writeTamperCommand);
+    	}
+
+    	superUserCommandWithDataByte(writeTamperCommand, outByte);
+    }
+
     /** Finds out  if the bootloader is unlocked and if the tamper flag is set */
     @Override
     public int getBootLoaderState() {
 		try {
-    		Log.v(TAG, "Getting bootloader state with " + queryCommand);
-    		
+    		Log.v(TAG, "Getting bootloader lock state with " + queryCommand);    		
     		int lockResult = superUserCommandWithByteResult(queryCommand);
-			
 			Log.v(TAG, "Got lock value " + lockResult);
+			
+    		Log.v(TAG, "Getting bootloader tamper flag with " + queryTamperCommand);
+    		int tamperResult = superUserCommandWithByteResult(queryTamperCommand);
+			Log.v(TAG, "Got tamper flag " + tamperResult);
+			
 			if (lockResult == 0) {
-				return BL_LOCKED;
+				if (tamperResult == 0) {
+					return BL_LOCKED;
+				} else {
+					return BL_TAMPERED_LOCKED;
+				}
 			} else if (lockResult == 1)  {
-				return BL_UNLOCKED;
+				if (tamperResult == 0) {
+					return BL_UNLOCKED;
+				} else {
+					return BL_TAMPERED_UNLOCKED;
+				}
 			} else {
 				return BL_UNKNOWN;
 			}
