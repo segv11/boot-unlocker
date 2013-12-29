@@ -121,10 +121,6 @@ public class bootLoader {
 
     /** Low-level code for pushing a query command through SU */
 	public int superUserCommandWithByteResult(String theCommand) throws IOException {
-		//Process p = Runtime.getRuntime().exec(new String[]{"su", "-c", queryCommand});
-		//int isLocked = p.getInputStream().read();
-
-		
 		Process p = Runtime.getRuntime().exec("su");
 	    DataOutputStream w =new DataOutputStream(p.getOutputStream());
 	    DataInputStream r = new DataInputStream(p.getInputStream());

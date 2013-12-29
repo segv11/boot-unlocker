@@ -77,7 +77,7 @@
             android:id="@+id/tamperFlagText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/waiting_for_root"
+            android:text="@string/unknown"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </LinearLayout>
@@ -92,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/large_pad"
-            android:onClick="doLockBootloader"
+            android:onClick="doClearTamper"
             android:text="@string/verb_clear" />
 
         <Button
@@ -100,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/large_pad"
-            android:onClick="doUnlockBootloader"
+            android:onClick="doSetTamper"
             android:text="@string/verb_set" />
 
     </LinearLayout>

@@ -227,7 +227,7 @@ public class mainActivity extends Activity {
 					bootLoaderTamperFlagText.setText(R.string.stat_not_tampered);
 	  				setButton.setEnabled(true);
 	  				clearButton.setEnabled(true);
-				} else if (result == bootLoader.BL_LOCKED || result == bootLoader.BL_UNLOCKED) {
+				} else if (result == bootLoader.BL_TAMPERED_LOCKED || result == bootLoader.BL_TAMPERED_UNLOCKED) {
 					bootLoaderTamperFlagText.setText(R.string.stat_tampered);
 	  				setButton.setEnabled(true);
 	  				clearButton.setEnabled(true);

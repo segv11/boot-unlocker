@@ -23,5 +23,6 @@
     <string name="tamper_flag">Tamper Flag:</string>
     <string name="verb_clear">Clear</string>
     <string name="verb_set">Set</string>
+    <string name="unknown">Unknown</string>
         
 </resources>
