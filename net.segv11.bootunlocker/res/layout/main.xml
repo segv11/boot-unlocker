@@ -108,20 +108,21 @@
                     android:gravity="center_horizontal" >
 
                     <Button
-                        android:id="@+id/clearButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/large_pad"
-                        android:onClick="doClearTamper"
-                        android:text="@string/verb_clear" />
-
-                    <Button
                         android:id="@+id/setButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/large_pad"
                         android:onClick="doSetTamper"
-                        android:text="@string/verb_set" />
+                        android:text="@string/verb_set_tamper" />
+
+                    <Button
+                        android:id="@+id/clearButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/large_pad"
+                        android:onClick="doClearTamper"
+                        android:text="@string/verb_clear_tamper" />
+
                 </LinearLayout>
 
                 <TextView
