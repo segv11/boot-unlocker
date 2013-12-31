@@ -15,9 +15,9 @@ of your device's internal storage. Device partitions, positions and state values
   * On the Galaxy Nexus, the bootloader uses at position `0x000007C` (124 decimal) of the "param" partition, stored as 01 / 00.
   * On the Nexus 10, the bootloader uses position `0x0000224` (548 decimal) of the "param" partition, stored as 00 / 01.
   * On the Nexus 4 and Nexus 5, the bootloaders use position `0x0004010` (16400 decimal) of the "misc" partition, stored as 00 / 01.
-  * On the Nexus 7 (2013), the bootloader uses position `0x04FFC00` (5241856 decimal) of the "aboot" parition, stored as 00 / 02.
+  * On the Nexus 7 (2013), the bootloader uses position `0x04FFC00` (5241856 decimal) of the "aboot" partition, stored as 00 / 02.
  
-The Nexus 4 and Nexus 5 bootloaders also keep a "Tamper" flag at position `0x0004014` (16404 decimal) of the "misc" parition.
+The Nexus 4 and Nexus 5 bootloaders also keep a "Tamper" flag at position `0x0004014` (16404 decimal) of the "misc" partition.
 It is stored as 00 / 01 (untampered/tampered), and can be viewed using `fastboot oem device-info`.
 _!BootUnlocker for Nexus Devices_ can set and clear this flag too.
 
