@@ -8,37 +8,29 @@ This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_), Nex
 --------
 
 _!BootUnlocker for Nexus Devices_ avoids using `fastboot oem unlock`, with its associated
-`userdata` wipe by writing directly to the `param`  (or `misc`, or `aboot`) partition of your device's internal storage.
-On the Galaxy Nexus, the bootloader stores the lock status at position `0x000007C`
-(124 decimal) of this partition: fastboot updates this when locking and unlocking the bootloader.
-On the Nexus 10, the bootloader uses position `0x0000224` (548 decimal).
-On the Nexus 4 and Nexus 5, the bootloader uses position `0x0004010` (16400 decimal) of the `misc` parition.
-On the Nexus 7 2013 the bootloader uses position `0x04FFC00` (5241856 decimal) of the `aboot` parition.
+`userdata` wipe. When fastboot unlocks it updates a lock status flag, stored on a partition
+of your device's internal storage. Device partitions, positions and state values
+(locked/unlocked) are as follows:
 
-The Nexus 4 and Nexus 5 bootloaders also keep a "Tamper" flag at position `0x0004014` (16404 decimal) of the `misc` parition.
-_!BootUnlocker for Nexus Devices_ can set and clear this flag too.
+* On the Galaxy Nexus, the bootloader uses at position `0x000007C` (124 decimal) of the "param" partition, stored as 01 / 00.
+* On the Nexus 10, the bootloader uses position `0x0000224` (548 decimal) of the "param" partition, stored as 00 / 01.
+* On the Nexus 4 and Nexus 5, the bootloaders use position `0x0004010` (16400 decimal) of the "misc" partition, stored as 00 / 01.
+* On the Nexus 7 (2013), the bootloader uses position `0x04FFC00` (5241856 decimal) of the "aboot" parition, stored as 00 / 02.
+ 
+The Nexus 4 and Nexus 5 bootloaders also keep a "Tamper" flag at position `0x0004014` (16404 decimal) of the "misc" parition.
+It is stored as 00 / 01 (untampered/tampered), and can be viewed using `fastboot oem device-info`.
+!_BootUnlocker for Nexus Devices_ can set and clear this flag too.
+
    
-_!BootUnlocker_ uses root privileges to write to the appropriate location directly, bypassing fastboot.
-This allows you to lock and unlock your bootloader from within
-Android, without wiping your `userdata` partition.
+!_BootUnlocker_ uses root privileges to write to to the appropriate location directly, bypassing fastboot.
+This allows you to lock and unlock your bootloader from within Android, without wiping your `userdata` partition.
 
+The technique used was discovered through the efforts of several contributors on [URL]http://forum.xda-developers.com/showthread.php?t=1650830&page=13[/URL]
 
-The technique used was discovered through the efforts of several contributors on
-[http://forum.xda-developers.com/showthread.php?t=1650830&page=13 an XDA thread].
-Special thanks go to those who posted raw images of their `param` partitions for
-analysis (
-[http://forum.xda-developers.com/member.php?u=316838 Archpope],
-[http://forum.xda-developers.com/member.php?u=3682533 AdamOutler],
-[http://forum.xda-developers.com/member.php?u=1566190 efrant], 
-[http://forum.xda-developers.com/member.php?u=2716223 NCguy], 
-[http://forum.xda-developers.com/member.php?u=2950618 Raftysworld],
-and others
-), as well as to the beta testers of this application (
-[http://forum.xda-developers.com/member.php?u=1566190 efrant], 
-[http://forum.xda-developers.com/member.php?u=4621394 Mach3.2],
-[http://forum.xda-developers.com/member.php?u=2740566 Meep70],
-and others
-). This application could not have been written without their contributions.
+Special thanks go to those who posted raw images of their device partitions,
+helped with/conducted the analysis, or put their devices in harm's way to beta test: 
+efrant, osm0sis, iuss, Archpope, AdamOutler, NCguy, Raftysworld, Mach3.2, Meep70, and others.
+This application could not have been written without their contributions.
 
-For more details and discussion about _!BootUnlocker for Nexus Devices_, follow this project
-on Google Code, or subscribe the application's XDA thread: http://forum.xda-developers.com/showthread.php?p=27878074
+To learn more about how this app works, and plans for future functionality, follow this project on Google Code,
+or subscribe the application's XDA thread: http://forum.xda-developers.com/showthread.php?p=27878074
