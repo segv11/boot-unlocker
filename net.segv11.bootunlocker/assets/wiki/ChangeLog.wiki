@@ -1,3 +1,6 @@
+=== Version 1.5.2: ===
+ * Updated wording for tamper flag management
+ 
 === Version 1.5.1: ===
  * Adds support for "flo" and "deb" (Nexus 7 2013)
  * Adds tamper flag management on "mako" (Nexus 4) and "hammerhead" (Nexus 5)

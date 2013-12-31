@@ -11,16 +11,16 @@
     <string name="stat_unlocked">Unlocked</string>
     <string name="stat_no_root">No root access</string>
     <string name="stat_unknown_device">Unsupported device</string>
-    <string name="stat_tampered">True</string>
-    <string name="stat_not_tampered">False</string>   
+    <string name="stat_tampered">Tampered</string>
+    <string name="stat_not_tampered">Untampered</string>   
     <string name="waiting_for_root">Waiting for root&#8230;</string>
     <string name="extra_unknown_device">Device &#8220;%1$s&quot;&#8221; not supported.</string>
     <string name="version">App Version:</string>
     <string name="device">Device: </string>
     <string name="bootloader">Bootloader: </string>
     <string name="tamper_flag">Tamper Flag:</string>
-    <string name="verb_clear_tamper">Untampered</string>
-    <string name="verb_set_tamper">Tampered</string>
+    <string name="verb_clear_tamper">Untamper</string>
+    <string name="verb_set_tamper">Tamper</string>
     <string name="unknown">Unknown</string>
         
 </resources>
