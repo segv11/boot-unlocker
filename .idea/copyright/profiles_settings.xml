@@ -1,0 +1,12 @@
+<component name="CopyrightManager">
+  <settings default="Apache 2.0">
+    <module2copyright>
+      <element module="All" copyright="Apache 2.0" />
+    </module2copyright>
+    <LanguageOptions name="__TEMPLATE__">
+      <option name="separateBefore" value="true" />
+      <option name="separateAfter" value="true" />
+      <option name="box" value="true" />
+    </LanguageOptions>
+  </settings>
+</component>

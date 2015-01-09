@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "net.segv11.bootunlocker.AboutActivity"/>
+      <point      
+        x = "3273"      
+        y = "623"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        xmlResourceName = "menu_main"/>
+      <point      
+        x = "2338"      
+        y = "311"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "net.segv11.bootunlocker.MainActivity"/>
+      <point      
+        x = "467"      
+        y = "155"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        xmlResourceName = "menu_about"/>
+      <point      
+        x = "4832"      
+        y = "623"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>
