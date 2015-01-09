@@ -87,7 +87,7 @@ public class MainActivity extends ActionBarActivity {
             deviceID.setText(android.os.Build.DEVICE);
             bootloaderID.setText(android.os.Build.BOOTLOADER);
         } catch (PackageManager.NameNotFoundException e) {
-            // TODO Auto-generated catch block
+            // Auto-generated catch block
             e.printStackTrace();
         }
 
@@ -201,7 +201,7 @@ public class MainActivity extends ActionBarActivity {
 
             // Now query the bootloader lock state and tamper flag.
             return Integer.valueOf(theBootLoader.getBootLoaderState());
-        }
+        } // doInBackground
 
 
         /*
@@ -265,9 +265,6 @@ public class MainActivity extends ActionBarActivity {
                 tamperLL.setVisibility(View.GONE);
             }
 
-        }
-    }
-
-
-
-}
+        } // onPostExecute
+    } // AsyncBootLoader
+} // MainActivity

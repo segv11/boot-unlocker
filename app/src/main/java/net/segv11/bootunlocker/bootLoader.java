@@ -28,8 +28,6 @@ import android.util.Log;
  *
  */
 public class bootLoader {
-	// TODO: JavaDoc
-	
 	/** constants describing bootloader state */
 	public static final int BL_UNSUPPORTED_DEVICE = -2;
 	public static final int BL_UNKNOWN = -1;

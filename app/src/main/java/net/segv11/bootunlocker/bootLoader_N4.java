@@ -26,8 +26,6 @@ import android.util.Log;
  *
  */
 public class bootLoader_N4 extends bootLoader {
-	// TODO: JavaDoc
-	
 	/** For logging */
 	private static final String TAG = "net.segv11.bootLoader_N4";
 	

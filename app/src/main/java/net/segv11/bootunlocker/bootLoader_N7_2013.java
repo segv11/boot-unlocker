@@ -27,8 +27,6 @@ import android.util.Log;
  *
  */
 public class bootLoader_N7_2013 extends bootLoader {
-	// TODO: JavaDoc
-	
 	/** For logging */
 	private static final String TAG = "net.segv11.bootLoader_N7_2013";
 	
