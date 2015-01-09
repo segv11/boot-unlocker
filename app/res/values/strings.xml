@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">BootUnlocker</string>
     <string name="welcome_text">BootUnlocker allows you to lock and unlock your bootloader from within Android, without rebooting your device, and without a USB connection. <i>BootUnlocker does NOT wipe your data.</i></string>
     <string name="tamper_text">Some newer device bootloaders set a tamper flag if it has ever been unlocked/altered. BootUnlocker allows you to change this state.</string>
@@ -12,9 +13,9 @@
     <string name="stat_no_root">No root access</string>
     <string name="stat_unknown_device">Unsupported device</string>
     <string name="stat_tampered">Tampered</string>
-    <string name="stat_not_tampered">Untampered</string>   
-    <string name="waiting_for_root">Waiting for root&#8230;</string>
-    <string name="extra_unknown_device">Device &#8220;%1$s&quot;&#8221; not supported.</string>
+    <string name="stat_not_tampered">Untampered</string>
+    <string name="waiting_for_root">Waiting for root…</string>
+    <string name="extra_unknown_device">Device “%1$s"” not supported.</string>
     <string name="version">App Version:</string>
     <string name="device">Device: </string>
     <string name="bootloader">Bootloader: </string>
@@ -22,5 +23,10 @@
     <string name="verb_clear_tamper">Untamper</string>
     <string name="verb_set_tamper">Tamper</string>
     <string name="unknown">Unknown</string>
-        
+
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="about_text">Hello world!  This is the text for the About Screen.</string>
+    <string name="action_about">About BootUnlocker</string>
+
+
 </resources>
