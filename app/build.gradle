@@ -7,16 +7,16 @@ android {
         applicationId "net.segv11.bootunlocker"
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 23
-        versionName '1.6beta1'
+        versionCode 24
+        versionName '1.6beta2'
     }
 
     signingConfigs {
         release {
-            storeFile     file(STORE_FILE)
+            storeFile file(STORE_FILE)
             storePassword STORE_PASSWORD
-            keyAlias      KEY_ALIAS
-            keyPassword   KEY_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
         }
     }
 
@@ -47,6 +47,7 @@ android {
 
     productFlavors {
     }
+    sourceSets { debug { assets.srcDirs = [ 'assets/'] } }
 }
 
 dependencies {
