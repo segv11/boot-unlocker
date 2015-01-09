@@ -1,0 +1,5 @@
+STORE_FILE=/path/to/your/keystore.release
+STORE_PASSWORD=password
+KEY_ALIAS=key_name
+KEY_PASSWORD=password
+OUTPUT_DIR=
