@@ -33,8 +33,8 @@ android {
                 variant.outputs.each { output ->
                     def file = output.outputFile
                     String parent = file.parent
-                    if (project.hasProperty('OUTPUT_DIR') && new File((String) OUTPUT_DIR).exists())
-                        parent = OUTPUT_DIR
+                    if (project.hasProperty('APK_EXPORT_DIR') && new File((String) APK_EXPORT_DIR).exists())
+                        parent = APK_EXPORT_DIR
                     output.outputFile = new File(
                             parent,
                             defaultConfig.applicationId + "." + defaultConfig.versionName + ".apk"
