@@ -22,26 +22,33 @@ import android.util.Log;
 
 /**
  * @description
- * 		device-specific bootloader code for Nexus 5 phones
+ * 		device-specific bootloader code for OnePlusOne phones
  *
  */
-public class bootLoader_N5 extends bootLoader {
+public class bootLoader_OnePlusOne extends bootLoader {
 	// TODO: JavaDoc
 	
 	/** For logging */
-	private static final String TAG = "net.segv11.bootLoader_N5";
-	
+	private static final String TAG = "net.segv11.bootLoader_OnePlusOne";
+
+    /*
+     * The bit for unlocked bootloader is at 0x000FFE10 in the aboot partition as you can see
+     * in my screenshot. The tamper flag should be at 0x000FFE14.
+     *
+     * 01 for unlocked; 01 for tampered
+     */
+
 	/** Private constants for working with the lock state in the misc partition
 	 */
 	private static final String queryCommand =
-			"dd ibs=1 count=1 skip=16400 if=/dev/block/platform/msm_sdcc.1/by-name/misc  # query "; 
+			"dd ibs=1 count=1 skip=1048080 if=/dev/block/platform/msm_sdcc.1/by-name/aboot  # query ";
 	private static final String writeCommand =
-			"dd obs=1 count=1 seek=16400 of=/dev/block/platform/msm_sdcc.1/by-name/misc # write ";
+			"dd obs=1 count=1 seek=1048080 of=/dev/block/platform/msm_sdcc.1/by-name/aboot  # write ";
 
 	private static final String queryTamperCommand =
-			"dd ibs=1 count=1 skip=16404 if=/dev/block/platform/msm_sdcc.1/by-name/misc  # query "; 
+			"dd ibs=1 count=1 skip=1048084 if=/dev/block/platform/msm_sdcc.1/by-name/aboot  # query ";
 	private static final String writeTamperCommand =
-			"dd obs=1 count=1 seek=16404 of=/dev/block/platform/msm_sdcc.1/by-name/misc # write ";
+			"dd obs=1 count=1 seek=1048084 of=/dev/block/platform/msm_sdcc.1/by-name/aboot  # write ";
 
     /** Locks or unlocks the bootloader */
     @Override

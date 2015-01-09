@@ -63,8 +63,12 @@ public class bootLoader {
     		return new bootLoader_N5();
     	} else if (android.os.Build.DEVICE.equals("flo")) {
     		return new bootLoader_N7_2013();
-    	} else if (android.os.Build.DEVICE.equals("deb")) {
-    		return new bootLoader_N7_2013();
+        } else if (android.os.Build.DEVICE.equals("deb")) {
+            return new bootLoader_N7_2013();
+        } else if (android.os.Build.DEVICE.equals("bacon")) {
+            return new bootLoader_OnePlusOne();
+        } else if (android.os.Build.DEVICE.equals("A0001")) {
+            return new bootLoader_OnePlusOne();
     	} else {
     		return null;
     	}
