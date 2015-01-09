@@ -1,6 +1,1 @@
-bin
-gen
-.metadata
-.settings
-.git
-.DS_Store
+/build
