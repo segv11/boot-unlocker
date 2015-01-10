@@ -27,14 +27,6 @@ Pricing:
 Availability:
 	All locations
 
-Supported Devices:
-	maguro
-	toro
-	toroplus
-	manta
-	mako
-	(manually exclude all others -- about 20 devices total)
-	
 Screenshots:	480x854 portrait	(actually 1280x720 and 1280x800 are now allowed too)
 	/net.segv11.bootunlocker/assets/art/screenshot_locked.png
 	/net.segv11.bootunlocker/assets/art/screenshot_unlocked.png

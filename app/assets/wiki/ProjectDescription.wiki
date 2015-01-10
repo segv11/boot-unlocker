@@ -2,11 +2,12 @@
 == !BootUnlocker for Nexus Devices -- Unlock your bootloader without fastboot. ==
 
 This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_), Nexus 4 (_mako_),
-Nexus 5 (_hammerhead_), Nexus 7 2013 (_flo_ or _deb_), or Nexus 10 (_manta_), with root.
+Nexus 5 (_hammerhead_), Nexus 7 2013 (_deb_ or _flo_), Nexus 10 (_manta_),
+or OnePlus One (_bacon_/_A0001_), with root.
 
 --------
 
-You've rooted your Galaxy Nexus, Nexus 4, Nexus 5, Nexus 7 (2013), or Nexus 10,
+You've rooted your device,
 and you are trying to decide between the security of relocking
 your bootloader (with stock recovery and USB Debugging off), and the flexibility
 of leaving it unlocked.
@@ -51,20 +52,20 @@ limitations under the License.
 
     * Source Code: http://code.google.com/p/boot-unlocker-gnex/source/browse/net.segv11.bootunlocker
 
-    * XDA Developers: http://forum.xda-developers.com/showthread.php?t=1731993
+    * XDA Developers: http://bit.ly/BootUnlocker
 
 
 ==== Downloads ====
 
     * Download application from Google Play: http://play.google.com/store/apps/details?id=net.segv11.bootunlocker
   
-    * Download application from Google Code: http://code.google.com/p/boot-unlocker-gnex/downloads
+    * Download application from Google Drive: https://drive.google.com/folderview?id=0B6qHcVHPO4VrbVZBX1oyT0FCX00&usp=sharing#list
 
 ==== Support ====
 
 	* Open an [http://code.google.com/p/boot-unlocker-gnex/issues Issue] on Google Code
 
-	* Leave a comment on [http://forum.xda-developers.com/showthread.php?p=27878074 the XDA Thread]
+	* Leave a comment on [http://bit.ly/BootUnlocker the XDA Thread]
 
 	* Email [mailto://support@segv11.net support@segv11.net]
 
