@@ -1,5 +1,5 @@
 === Version 1.6.1: ===
- * Adds support for "bacon"/"A0001" (OnePlus One)
+ * Adds support for "bacon" / "A0001" (OnePlus One)
 
 === Version 1.5.2: ===
  * Updated wording for tamper flag management
