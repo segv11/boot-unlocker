@@ -1,3 +1,7 @@
+--
+-- Custom Writer for Google Code Wiki Syntax
+--         https://code.google.com/p/support/wiki/WikiSyntax
+--
 -- Invoke with: pandoc -t GoogleWiki.lua
 
 -- Escaping (one word at a time)
