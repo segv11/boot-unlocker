@@ -19,8 +19,8 @@ package net.segv11.bootunlocker;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,10 +34,12 @@ import java.io.IOException;
 
 public class MainActivity extends ActionBarActivity {
 
-    /** For logging */
+    /**
+     * For logging
+     */
     private static final String TAG = "net.segv11.mainActivity";
-    private bootLoader theBootLoader = null;
     private static final Boolean dontCare = false;
+    private bootLoader theBootLoader = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +66,9 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    /** Called at the start of the visible lifetime */
+    /**
+     * Called at the start of the visible lifetime
+     */
     @Override
     public void onStart() {
         super.onStart();
@@ -92,11 +96,12 @@ public class MainActivity extends ActionBarActivity {
         }
 
 
-
         new AsyncBootLoader().execute(setState, desiredState, setTamperFlag, desiredTamperFlag);
     }
 
-    /** Called from UI to unlock the bootloader */
+    /**
+     * Called from UI to unlock the bootloader
+     */
     public void doUnlockBootloader(View v) {
         Boolean setState = true;
         Boolean desiredState = false;
@@ -105,7 +110,9 @@ public class MainActivity extends ActionBarActivity {
         new AsyncBootLoader().execute(setState, desiredState, setTamperFlag, desiredTamperFlag);
     }
 
-    /** Called from UI to lock the bootloader */
+    /**
+     * Called from UI to lock the bootloader
+     */
     public void doLockBootloader(View v) {
         Boolean setState = true;
         Boolean desiredState = true;
@@ -114,7 +121,9 @@ public class MainActivity extends ActionBarActivity {
         new AsyncBootLoader().execute(setState, desiredState, setTamperFlag, desiredTamperFlag);
     }
 
-    /** Called from UI to clear tamper flag */
+    /**
+     * Called from UI to clear tamper flag
+     */
     public void doClearTamper(View v) {
         Boolean setState = false;
         Boolean desiredState = dontCare;
@@ -123,7 +132,9 @@ public class MainActivity extends ActionBarActivity {
         new AsyncBootLoader().execute(setState, desiredState, setTamperFlag, desiredTamperFlag);
     }
 
-    /** Called from UI to set tamper flag */
+    /**
+     * Called from UI to set tamper flag
+     */
     public void doSetTamper(View v) {
         Boolean setState = false;
         Boolean desiredState = dontCare;
@@ -133,16 +144,15 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-
     private class AsyncBootLoader extends AsyncTask<Boolean, Void, Integer> {
-    	/* Ideas for the future:
+        /* Ideas for the future:
     	 * 		Can we receive a broadcast intent when someone ELSE tweaks the param partition?
     	 * 		Do we want a progress indicator in case su takes a long time?
     	 *		Set text colors for lock status?
     	 */
 
         @Override
-        protected Integer doInBackground(Boolean...booleans) {
+        protected Integer doInBackground(Boolean... booleans) {
             Boolean setState = booleans[0];
             Boolean desiredState = booleans[1];
             Boolean setTamperFlag = booleans[2];
@@ -220,7 +230,7 @@ public class MainActivity extends ActionBarActivity {
             Button clearButton = (Button) findViewById(R.id.clearButton);
 
             TextView extendedStatus = (TextView) findViewById(R.id.extendedStatus);
-            LinearLayout tamperLL= (LinearLayout) findViewById(R.id.tamperLayout);
+            LinearLayout tamperLL = (LinearLayout) findViewById(R.id.tamperLayout);
 
             if (result == bootLoader.BL_UNLOCKED || result == bootLoader.BL_TAMPERED_UNLOCKED) {
                 bootLoaderStatusText.setText(R.string.stat_unlocked);
@@ -232,7 +242,7 @@ public class MainActivity extends ActionBarActivity {
                 lockButton.setEnabled(true);
                 unlockButton.setEnabled(true);
                 extendedStatus.setText("");
-            } else if (result == bootLoader.BL_UNSUPPORTED_DEVICE){
+            } else if (result == bootLoader.BL_UNSUPPORTED_DEVICE) {
                 bootLoaderStatusText.setText(R.string.stat_unknown_device);
                 lockButton.setEnabled(false);
                 unlockButton.setEnabled(false);
