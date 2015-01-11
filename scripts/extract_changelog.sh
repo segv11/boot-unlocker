@@ -1,6 +1,11 @@
 #!/bin/sh
 
 #
+# Changelog entries are stored in the git tags, in MediaWiki format
+# (I didn't use Markdown, because git eats the '#' needed for headings)
+#
+
+#
 # Parameters
 #
 cd /Users/jmason888/git/BootUnlocker
@@ -26,14 +31,8 @@ FOO
   #
 
 ) | \
-# Convert from mediawiki (needed because git drops #'s) to goole wiki
-# TODO: need googlecodewiki pandoc writer
-pandoc -f mediawiki -t dokuwiki | sed -e "
-s|//|_|g
-s/^  / /
-s/====/===/g
-s/[A-Z][a-z][a-z]*[A-Z][a-zA-Z]*/!&/g
-" >> $outputFile
+# Convert from MediaWiki to Google Code Wiki
+pandoc -f mediawiki -t ./scripts/GoogleWiki.lua >> $outputFile
 
 cd $outputDir
 git commit -a -m "Automatic documentation update"

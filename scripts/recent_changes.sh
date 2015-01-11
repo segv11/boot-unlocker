@@ -1,5 +1,10 @@
 #!/bin/sh
 
+#
+# Print a Changelog entry, in MediaWiki format
+# (I didn't use Markdown, because git eats the '#' needed for headings)
+#
+
 (
 
 # Get the commit logs from the current point back to the last tag
