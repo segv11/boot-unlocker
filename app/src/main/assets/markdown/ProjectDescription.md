@@ -31,7 +31,7 @@ your bootloader, just unlock your screen and run *BootUnlocker*.
 
 ------------------------------------------------------------------------
 
-#### License
+### License
 
 *BootUnlocker for Nexus Devices* is Open Source Software, licensed under the
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
@@ -48,21 +48,21 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-#### Links
+### Links
 
 * Change Log: [ChangeLog]
 * Learn how _BootUnlocker for Nexus Devices_ works: [HowItWorks]
 * Source Code: <http://code.google.com/p/boot-unlocker-gnex/source/browse/>
 * XDA Developers: <http://bit.ly/BootUnlocker>
 
-#### Downloads
+### Downloads
 
 * Download application from Google Play:
   <http://play.google.com/store/apps/details?id=net.segv11.bootunlocker>
 * Download application from Google Drive:
   <https://drive.google.com/folderview?id=0B6qHcVHPO4VrbVZBX1oyT0FCX00&usp=sharing#list>
 
-#### Support
+### Support
 
 * Open an [Issue](http://code.google.com/p/boot-unlocker-gnex/issues) on Google Code
 * Leave a comment on [the XDA Thread](http://bit.ly/BootUnlocker)

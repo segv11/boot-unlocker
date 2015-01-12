@@ -52,3 +52,7 @@ application could not have been written without their contributions.
 To learn more about how this app works, and plans for future
 functionality, follow this project on Google Code, or subscribe the
 application's XDA thread: <http://bit.ly/BootUnlocker>
+
+Please note that the Nexus 7 (2012 version) cannot be supported
+in *BootUnlocker*. See this XDA thread for an alternative:
+<http://forum.xda-developers.com/showthread.php?t=2068207>

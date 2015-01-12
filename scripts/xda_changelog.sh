@@ -11,7 +11,7 @@
 cd /Users/jmason888/git/BootUnlocker
 baseDir=/Users/jmason888/git/BootUnlocker
 outputDir=build/docs/xda
-outputFile=$outputDir/ChangeLog.bb
+outputFile=$outputDir/ChangeLog.xda.txt
 
 cd $baseDir
 

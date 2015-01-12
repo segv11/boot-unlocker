@@ -75,12 +75,10 @@ end
 -- lev is an integer, the header level.
 function Header(level, s, attr)
   if level == 1 then
- 	 return "[B][SIZE=+3]" .. s .. "[/SIZE][/B]"
-  elseif level == 2 then
  	 return "[B][SIZE=+2]" .. s .. "[/SIZE][/B]"
-  elseif level == 3 then
+  elseif level == 2 then
  	 return "[B][SIZE=+1]" .. s .. "[/SIZE][/B]"
-  elseif level == 4 then
+  elseif level == 3 then
  	 return "[B][U]" .. s .. "[/U][/B]"
   else
  	 return "[B]" .. s .. "[/B]"
