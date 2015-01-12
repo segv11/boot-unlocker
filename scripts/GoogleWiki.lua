@@ -67,7 +67,11 @@ function Strikeout(s)
 end
 
 function Link(s, src, tit)
-  return '[' .. src .. " " .. s .. ']'
+  if s then
+    return '[' .. src .. " " .. s .. ']'
+  else
+    return src
+  end
 end
 
 function Image(s, src, tit)
