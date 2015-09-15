@@ -4,12 +4,12 @@ This application REQUIRES a Galaxy Nexus (maguro, toro or toroplus), Nexus 4 (ma
 
 BootUnlocker for Nexus Devices avoids using fastboot oem unlock, with its associated userdata wipe. When fastboot unlocks it updates a lock status flag, stored on a partition of your device's internal storage. Device partitions, positions and state values (locked/unlocked) are as follows:
 
-On the Galaxy Nexus, the bootloader uses at position 0x000007C of the "param" partition, stored as 01 / 00.
-On the Nexus 10, the bootloader uses position 0x0000224 of the "param" partition, stored as 00 / 01.
-On the Nexus 4 and Nexus 5, the bootloaders use position 0x0004010 of the "misc" partition, stored as 00 / 01.
-On the Nexus 7 (2013), the bootloader uses position 0x04FFC00 of the "aboot" partition, stored as 00 / 02.
-On the OnePlus One, the bootloader uses position 0x000FFE10 of the "aboot" partition, stored as 00 / 01.
-The Nexus 4 and Nexus 5 bootloaders also keep a "Tamper" flag at position 0x0004014 of the "misc" partition. It is stored as 00 / 01 (untampered/tampered), and can be viewed using fastboot oem device-info. The OnePlus One has a "Tamper" flag, at position 0x000FFE14 of the "aboot" partition. BootUnlocker for Nexus Devices can set and clear this flag too.
+ - On the Galaxy Nexus, the bootloader uses at position 0x000007C of the "param" partition, stored as 01 / 00.
+ - On the Nexus 10, the bootloader uses position 0x0000224 of the "param" partition, stored as 00 / 01.
+ - On the Nexus 4 and Nexus 5, the bootloaders use position 0x0004010 of the "misc" partition, stored as 00 / 01.
+ - On the Nexus 7 (2013), the bootloader uses position 0x04FFC00 of the "aboot" partition, stored as 00 / 02.
+ - On the OnePlus One, the bootloader uses position 0x000FFE10 of the "aboot" partition, stored as 00 / 01.
+ - The Nexus 4 and Nexus 5 bootloaders also keep a "Tamper" flag at position 0x0004014 of the "misc" partition. It is stored as 00 / 01 (untampered/tampered), and can be viewed using fastboot oem device-info. The OnePlus One has a "Tamper" flag, at position 0x000FFE14 of the "aboot" partition. BootUnlocker for Nexus Devices can set and clear this flag too.
 
 BootUnlocker uses root privileges to write to to the appropriate location directly, bypassing fastboot. This allows you to lock and unlock your bootloader from within Android, without wiping your userdata partition.
 
