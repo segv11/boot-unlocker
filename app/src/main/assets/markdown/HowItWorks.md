@@ -30,6 +30,11 @@ internal storage. Device partitions, positions and state values
   The OnePlus One has a "Tamper" flag, at position
   `0x000FFE14` of the "aboot" partition, stored as `00` / `01` (untampered/tampered).
 
+* On the OnePlus 2, the bootloader uses position
+  `0x00000010` of the "devinfo" partition, stored as `00` / `01`.
+  The OnePlus 2 has a "Tamper" flag, at position
+  `0x00000014` of the "devinfo" partition, stored as `00` / `01` (untampered/tampered).
+
 On devices with Tamper flag locations listed above,
 *BootUnlocker for Nexus Devices* can also set and clear this flag.
 You can also view this flag using "`fastboot oem device-info`".
@@ -45,7 +50,7 @@ contributors on <http://forum.xda-developers.com/showthread.php?t=1650830&page=1
 Special thanks go to those who posted raw images of their device
 partitions, helped with/conducted the analysis, or put their devices in
 harm's way to beta test: efrant, osm0sis, iuss, Archpope, AdamOutler,
-NCguy, Raftysworld, Mach3.2, Meep70, Polarfuchs, and others. This
+NCguy, Raftysworld, Mach3.2, Meep70, Polarfuchs, thedropdead, and others. This
 application could not have been written without their contributions.
 
 To learn more about how this app works, and plans for future

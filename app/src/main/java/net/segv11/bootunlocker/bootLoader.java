@@ -71,6 +71,8 @@ public class bootLoader {
             return new bootLoader_OnePlusOne();
         } else if (android.os.Build.DEVICE.equals("A0001")) {
             return new bootLoader_OnePlusOne();
+        } else if (android.os.Build.DEVICE.equals("OnePlus2")) {
+            return new bootLoader_OnePlus2();
         } else {
             return null;
         }

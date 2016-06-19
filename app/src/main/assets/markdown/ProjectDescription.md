@@ -7,8 +7,8 @@ tags: [Featured]
 
 This application **REQUIRES** a Galaxy Nexus (*maguro*, *toro* or
 *toroplus*), Nexus 4 (*mako*), Nexus 5 (*hammerhead*), Nexus 7
-2013 (*deb* or *flo*), Nexus 10 (*manta*), or OnePlus One
-(*bacon* / *A0001*), with root.
+2013 (*deb* or *flo*), Nexus 10 (*manta*), OnePlus One
+(*bacon* / *A0001*), or OnePlus 2 (*OnePlus2*), with root.
 
 ------------------------------------------------------------------------
 
