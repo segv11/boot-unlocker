@@ -39,7 +39,7 @@ You can redistribute, reuse, or modify this software as permitted under this
 license.
 
 Source code is available on
-[Google Code](https://code.google.com/p/boot-unlocker-gnex/),
+[GitHub](https://github.com/segv11/boot-unlocker),
 along current and previous versions of the complied application.
 
 Unless required by applicable law or agreed to in writing, software
@@ -52,7 +52,7 @@ limitations under the License.
 
 * Change Log: [ChangeLog]
 * Learn how _BootUnlocker for Nexus Devices_ works: [HowItWorks]
-* Source Code: <http://code.google.com/p/boot-unlocker-gnex/source/browse/>
+* Source Code: <https://github.com/segv11/boot-unlocker>
 * XDA Developers: <http://bit.ly/BootUnlocker>
 
 ### Downloads
@@ -64,6 +64,6 @@ limitations under the License.
 
 ### Support
 
-* Open an [Issue](http://code.google.com/p/boot-unlocker-gnex/issues) on Google Code
+* Open an [Issue](https://github.com/segv11/boot-unlocker/issues) on GitHub
 * Leave a comment on [the XDA Thread](http://bit.ly/BootUnlocker)
 * Email [support@segv11.net](mailto://support@segv11.net)

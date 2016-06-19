@@ -19,9 +19,8 @@ internal storage. Device partitions, positions and state values
 
 * On the Nexus 4 and Nexus 5, the bootloaders use position
   `0x0004010` of the "misc" partition, stored as `00` / `01`.
-  The Nexus 4 and Nexus 5 bootloaders also keep a "Tamper"
-  flag at position `0x0004014` of the "misc" partition. It is
-  stored as `00` / `01` (untampered/tampered).
+  The Nexus 4 and Nexus 5 have a "Tamper" flag, at position
+  `0x0004014` of the "misc" partition, stored as `00` / `01` (untampered/tampered).
 
 * On the Nexus 7 (2013), the bootloader uses position
   `0x04FFC00` of the "aboot" partition, stored as `00` / `02`.
@@ -29,7 +28,7 @@ internal storage. Device partitions, positions and state values
 * On the OnePlus One, the bootloader uses position
   `0x000FFE10` of the "aboot" partition, stored as `00` / `01`.
   The OnePlus One has a "Tamper" flag, at position
-  `0x000FFE14` of the "aboot" partition.
+  `0x000FFE14` of the "aboot" partition, stored as `00` / `01` (untampered/tampered).
 
 On devices with Tamper flag locations listed above,
 *BootUnlocker for Nexus Devices* can also set and clear this flag.
@@ -50,7 +49,7 @@ NCguy, Raftysworld, Mach3.2, Meep70, Polarfuchs, and others. This
 application could not have been written without their contributions.
 
 To learn more about how this app works, and plans for future
-functionality, follow this project on Google Code, or subscribe the
+functionality, follow this project on GitHub, or subscribe the
 application's XDA thread: <http://bit.ly/BootUnlocker>
 
 Please note that the Nexus 7 (2012 version) cannot be supported

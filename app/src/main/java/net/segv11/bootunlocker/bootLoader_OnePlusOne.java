@@ -37,7 +37,7 @@ public class bootLoader_OnePlusOne extends bootLoader {
      */
 
     /**
-     * Private constants for working with the lock state in the misc partition
+     * Private constants for working with the lock state in the aboot partition
      */
     private static final String queryCommand =
             "dd ibs=1 count=1 skip=1048080 if=/dev/block/platform/msm_sdcc.1/by-name/aboot  # query ";
