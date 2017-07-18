@@ -1,0 +1,48 @@
+For those of you who are thinking of helping to bring this app to a new device, you should know what is involved.  First, it should be a Nexus device, with "fastboot oem unlock" and "fastboot oem lock".  Second you should know which devices are already supported, and which we probably can't support.
+
+You will want up-to-date nandroids, [I]copied off-device[/I]. Backup your /sdcard off-device too, as nandroids don't save this.
+
+The general idea is that we take images of [I]all the partitions[/I], in both the locked and unlocked states.  We then compare them to see where the changes were.  Once we've figured it out, we test it by flashing back the appropriate images to make sure that they change the lockstate of the device.  If we can't figure it out, we will need to unlock your device using "fastboot oem unlock", which will wipe ALL of /data, including /sdcard...
+
+If your device started locked, we would:
+[LIST=1]
+[*]run "ls -lR /dev/block" and send me the result
+[*]I'll send back a list of "dd" commands to dump all the paritions to /sdcard
+[*]dump all the partitions
+[*]take md5's of each image for quick change detection
+[*]copy the images off-device
+[*]reboot bootloader
+[*]fastboot oem lock
+[*]reboot
+[*]dump all the partitions again, to a different directory
+[*]take md5's of each new image for quick change detections
+[*]copy new the images off-device
+[/LIST]
+
+If your device started locked, we would:
+[LIST=1]
+[*]run "ls -lR /dev/block" and send me the result
+[*]I'll send back a list of "dd" commands to dump all the paritions to /sdcard
+[*]dump all the partitions
+[*]take md5's of each image for quick change detection
+[*]copy the images off-device
+[*]reboot bootloader
+[*]fastboot oem unlock (wipes device!)
+[*]reboot
+[*]re-enable ADB debugging
+[*]dump all the partitions again, to a different directory
+[*]take md5's of each new image for quick change detections
+[*]copy new the images off-device
+[*]restore a nandroid of userdata
+[/LIST]
+
+
+At this point, we can use the md5's to check which partitions have changed, which are hopefully only a few.  We'll discuss which ones seem "interesting", so you can zip up and send as few images as necessary.  I'll run "xxd" to make hexdumps of them, and "diff" and friends to analyze them.
+
+If we have a candidate set of changes, then you would use dd to copy back the relevant image(s) and reboot bootloader, to verify that this does indeed unlock and lock the device.  If everything works, then I can change BootUnlocker to recognize the device.  If things don't work, and you want an unlocked bootloader, you will need to unlock it with "fastboot oem unlock" and then restore your nandroid.
+
+As you can see, there is a significant risk of data loss.  You also need to be comfortable with fastboot, adb, and the adb/linux shell on your device.  And of course, you need root.  :)
+
+We've got the Galaxy Nexus, Nexus 4, and Nexus 10 in the bag.  The ASUS bootloader in the Nexus 7 (2012 edition) stores the lockstate using device-specific encryption; we cannot support that device.  If you've got some other Nexus device and feel like some hacking, PM me and we'll see if we can figure your device out.
+
+On the other hand, I'm not the only one who can do this work; many of us figured out the G-Nex together, on a different XDA thread.  If you've already done the relevant hacking on your bootloader and know how it stores the lockstate, send me the info and I'd be happy to add it to BootUnlocker.

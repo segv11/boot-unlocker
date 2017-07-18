@@ -19,17 +19,24 @@ internal storage. Device partitions, positions and state values
 
 * On the Nexus 4 and Nexus 5, the bootloaders use position
   `0x0004010` of the "misc" partition, stored as `00` / `01`.
-  The Nexus 4 and Nexus 5 bootloaders also keep a "Tamper"
-  flag at position `0x0004014` of the "misc" partition. It is
-  stored as `00` / `01` (untampered/tampered).
+  The Nexus 4 and Nexus 5 have a "Tamper" flag, at position
+  `0x0004014` of the "misc" partition, stored as `00` / `01` (untampered/tampered).
 
 * On the Nexus 7 (2013), the bootloader uses position
   `0x04FFC00` of the "aboot" partition, stored as `00` / `02`.
 
-* On the OnePlus One, the bootloader uses position
+* On the OnePlus One and OnePlus X, the bootloaders use position
   `0x000FFE10` of the "aboot" partition, stored as `00` / `01`.
-  The OnePlus One has a "Tamper" flag, at position
-  `0x000FFE14` of the "aboot" partition.
+  The OnePlus One and OnePlus X have a "Tamper" flag, at position
+  `0x000FFE14` of the "aboot" partition, stored as `00` / `01` (untampered/tampered).
+
+* On the OnePlus 2, the bootloader uses position
+  `0x00000010` of the "devinfo" partition, stored as `00` / `01`.
+  The OnePlus 2 has a "Tamper" flag, at position
+  `0x00000014` of the "devinfo" partition, stored as `00` / `01` (untampered/tampered).
+
+* On the Yota Phone 2, the bootloader uses position
+  `0x004FFE10` of the "aboot" partition, stored as `00` / `01`.
 
 On devices with Tamper flag locations listed above,
 *BootUnlocker for Nexus Devices* can also set and clear this flag.
@@ -46,11 +53,12 @@ contributors on <http://forum.xda-developers.com/showthread.php?t=1650830&page=1
 Special thanks go to those who posted raw images of their device
 partitions, helped with/conducted the analysis, or put their devices in
 harm's way to beta test: efrant, osm0sis, iuss, Archpope, AdamOutler,
-NCguy, Raftysworld, Mach3.2, Meep70, Polarfuchs, and others. This
-application could not have been written without their contributions.
+NCguy, Raftysworld, Mach3.2, Meep70, Polarfuchs, thedropdead, Titokhan,
+Crazyphil, and others. This application could not have been written without
+their contributions.
 
 To learn more about how this app works, and plans for future
-functionality, follow this project on Google Code, or subscribe the
+functionality, follow this project on GitHub, or subscribe the
 application's XDA thread: <http://bit.ly/BootUnlocker>
 
 Please note that the Nexus 7 (2012 version) cannot be supported

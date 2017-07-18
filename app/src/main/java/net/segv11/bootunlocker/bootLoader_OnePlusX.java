@@ -21,17 +21,17 @@ import android.util.Log;
 import java.io.IOException;
 
 /**
- * @description device-specific bootloader code for OnePlusOne phones
+ * @description device-specific bootloader code for OnePlusX phones
  */
-public class bootLoader_OnePlusOne extends bootLoader {
+public class bootLoader_OnePlusX extends bootLoader {
     /**
      * For logging
      */
-    private static final String TAG = "net.segv11.bootLoader_OnePlusOne";
+    private static final String TAG = "net.segv11.bootLoader_OnePlusX";
 
     /*
-     * The bit for unlocked bootloader is at 0x000FFE10 in the aboot partition as you can see
-     * in my screenshot. The tamper flag should be at 0x000FFE14.
+     * The bit for unlocked bootloader is at 0x000FFE10 in the aboot partition.
+     * The tamper flag is at 0x000FFE14.
      *
      * 01 for unlocked; 01 for tampered
      */

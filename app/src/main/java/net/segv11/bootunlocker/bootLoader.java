@@ -67,14 +67,20 @@ public class bootLoader {
             return new bootLoader_N7_2013();
         } else if (android.os.Build.DEVICE.equals("deb")) {
             return new bootLoader_N7_2013();
-        } else if (android.os.Build.DEVICE.equals("shamu")) {
-            return null;    // new bootLoader_N6(); // TODO: Support Nexus 6
-        } else if (android.os.Build.DEVICE.equals("flounder")) {
-            return null;    // new bootLoader_N9(); // TODO: Support Nexus 9
         } else if (android.os.Build.DEVICE.equals("bacon")) {
             return new bootLoader_OnePlusOne();
         } else if (android.os.Build.DEVICE.equals("A0001")) {
             return new bootLoader_OnePlusOne();
+        } else if (android.os.Build.DEVICE.equals("OnePlus2")) {
+            return new bootLoader_OnePlus2();
+        } else if (android.os.Build.DEVICE.equals("OnePlus")) {
+            return new bootLoader_OnePlusX();
+        } else if (android.os.Build.DEVICE.equals("ONE")) {
+            return new bootLoader_OnePlusX();
+        } else if (android.os.Build.DEVICE.equals("E1001")) {
+            return new bootLoader_OnePlusX();
+        } else if (android.os.Build.DEVICE.equals("yotaphone2")) {
+            return new bootLoader_YotaPhone2();
         } else {
             return null;
         }

@@ -1,6 +1,9 @@
-This application REQUIRES a Galaxy Nexus (GSM, Verizon, or Sprint), Nexus 4, Nexus 5, Nexus 7 (2013), Nexus 10, or OnePlus One with root. Nexus 6 and Nexus 9 are not supported yet.
+This application REQUIRES a Galaxy Nexus (GSM, Verizon, or Sprint), Nexus 4, Nexus 5, Nexus 7 (2013), Nexus 10, OnePlus One, OnePlus 2, OnePlus X, or Yota Phone 2 with root.
 
 
+Nexus 6 and newer devices contain security measures in their bootloaders, connected with factory-reset protection. These measures make it very difficult to use root to lock/unlock the bootloader, and as a result it is unlikely that Nexus 6, Nexus 9, Nexus 5X and Nexus 6P will ever be supported.
+
+-------------
 
 You've rooted your device, and you are trying to decide between the security of relocking your bootloader (with stock recovery and USB Debugging off), and the flexibility of leaving it unlocked.
 
@@ -14,7 +17,7 @@ License:
 --------
 
 BootUnlocker for Nexus Devices_ is Open Source Software, licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0.html
-Source code is available on Google Code: https://code.google.com/p/boot-unlocker-gnex/
+Source code is available on GitHub: https://github.com/segv11/boot-unlocker
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
@@ -25,6 +28,6 @@ Support:
 --------
 
 For support, you can:
-	* Open an issue on Google Code
+	* Open an issue on GitHub
 	* Join this app's discussion on XDA: http://bit.ly/BootUnlocker
 	* Email the developer

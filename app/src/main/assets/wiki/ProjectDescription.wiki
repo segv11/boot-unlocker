@@ -3,7 +3,8 @@
 
 This application *REQUIRES* a Galaxy Nexus (_maguro_, _toro_ or _toroplus_), Nexus 4 (_mako_),
 Nexus 5 (_hammerhead_), Nexus 7 2013 (_deb_ or _flo_), Nexus 10 (_manta_),
-or !OnePlus One (_bacon_ / _A0001_), with root.
+!OnePlus One (_bacon_ / _A0001_), !OnePlus 2 (_OnePlus2_),
+or !OnePlus X (_OnePlus_ / _ONE_ / _E1001_), with root.
 
 --------
 
@@ -33,7 +34,7 @@ _!BootUnlocker for Nexus Devices_ is Open Source Software, licensed under the
 [http://www.apache.org/licenses/LICENSE-2.0.html Apache License, Version 2.0].
 You can redistribute, reuse, or modify this software as permitted under this license.
 
-Source code is available on [https://code.google.com/p/boot-unlocker-gnex/ Google Code],
+Source code is available on [https://github.com/segv11/boot-unlocker/ GitHub],
 along current and previous versions of the complied application.
 
 Unless required by applicable law or agreed to in writing, software
@@ -46,11 +47,9 @@ limitations under the License.
 
     * Change Log: [ChangeLog]
 
-    * Known Issues: [KnownIssues]
-
     * Learn how _!BootUnlocker for Nexus Devices_ works: [HowItWorks]
 
-    * Source Code: http://code.google.com/p/boot-unlocker-gnex/source/browse/
+    * Source Code: https://github.com/segv11/boot-unlocker
 
     * XDA Developers: http://bit.ly/BootUnlocker
 
@@ -63,7 +62,7 @@ limitations under the License.
 
 ==== Support ====
 
-	* Open an [http://code.google.com/p/boot-unlocker-gnex/issues Issue] on Google Code
+	* Open an [https://github.com/segv11/boot-unlocker/issues Issue] on GitHub
 
 	* Leave a comment on [http://bit.ly/BootUnlocker the XDA Thread]
 
